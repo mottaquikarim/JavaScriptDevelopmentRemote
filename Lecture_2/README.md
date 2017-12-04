@@ -21,7 +21,9 @@ Javascript Engineer, Honey
 ---
 ## What is a Data Type?
 
-In programming languages, a data type is a classification identifying one of various types of data. From a data type, we can determine:
+In programming languages, a data type is a classification identifying one of various types of data. 
+
+From a data type, we can determine:
 
 * the possible values for that type
 * the operations that can be performed on that type
@@ -33,11 +35,17 @@ In programming languages, a data type is a classification identifying one of var
 Most programming languages have the following data types
 
 * `strings` : single words or sentences surrounded by double or single quote, e.g. `'Hello World'`
+|||
 * `integers` : any number without a decimal point, e.g. `9`
+|||
 * `floats` : any number  with a decimal point, e.g. `3.99`
+|||
 * `booleans` : either true or false, i.e. `true`, `false`
+|||
 * `arrays` : collections of data, e.g. `['Shirts', 'Pants', 'Dresses']`
+|||
 * `associative array`: collection of data in the form of key-value pairs. Also referred to as a `map` or `dictionary`.
+|||
 * `objects` : a representation of something
 
 ---
