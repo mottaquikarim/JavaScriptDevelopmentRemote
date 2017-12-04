@@ -1,17 +1,36 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/css/reveal.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/css/theme/white.css">
 	</head>
 	<body>
 		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+			<section data-markdown=""  
+				 data-separator="^\n\n\n"  
+				 data-separator-vertical="^\n\n"  
+				 data-separator-notes="^Note:"  
+				 data-charset="iso-8859-15">
+			</section>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/js/reveal.min.js"></script>
 		<script>
-			Reveal.initialize();
+			const hashstr = window.location.search.substr(1);
+			const hasharr = hashstr.split('&')
+			const hashdict = hasharr.reduce((hash, arg) => {
+				const bits = hash.split('=')
+				hash[bits[0]] = bits[1]
+				return hash;
+			}, {});
+			const lecture = hashdict['lecture']
+			if (lecture) {
+				const url = `https://cdn.rawgit.com/mottaquikarim/JavaScriptDevelopmentRemote/8bc62aca/Lecture_${lecture}/README.md`	
+				const reveal = document.querySelector('.reveal section')
+				if (reveal) {
+					reveal.setAttribute('data-markdown', url);
+					Reveal.initialize();
+				}
+				
+			}
 		</script>
 	</body>
 </html>
