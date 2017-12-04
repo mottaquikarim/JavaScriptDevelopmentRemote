@@ -195,6 +195,8 @@ With the double-equals equality operator, `==`, JavaScript will perform type coe
 //=> false
 ```
 
+-
+
 Basically, numbers and strings that contain numbers of the same value will be considered equal. We will **never** use double-equals.
 
 ---
@@ -282,6 +284,7 @@ This operator takes one value, so it's an example of a unary operator. We can al
 !("")
 //=> true
 ```
+
 -
 
 We often use the `!` operator in guard statements in the beginning of a function.
