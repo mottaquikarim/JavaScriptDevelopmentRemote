@@ -33,11 +33,8 @@
 						reveal.setAttribute('data-markdown', url);
 						Reveal.initialize({
 							dependencies: [
-								{ src: '../../lib/js/classList.js', condition: function() { return !document.body.classList; } },
-								{ src: 'marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					    			{ src: 'markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					    			{ src: '../highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-								{ src: '../notes/notes.js' }
+								{ src: 'https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					    			{ src: 'https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 							]	
 						});
 					}
