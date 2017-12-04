@@ -1,8 +1,10 @@
-# Lecture 2: Data Types
+# Data Types
+## Class 2
+&nbsp;
 
-### Wes Yu
+### Wesley Yu
 
-Software Engineer, Honey
+Javascript Engineer, Honey
 
 ---
 ## Objectives
@@ -70,7 +72,6 @@ JavaScript has a standard library of `objects`, including `Array`, `Date`, `Math
 * statements, *e.g.* `var x = 2;`
 
 ---
-![GeneralAssemb.ly](../../img/icons/code_along.png)
 ##Data Types
 
 Let's use `Node.js`'s console to explore types.
@@ -91,7 +92,7 @@ typeof({}) === 'object'
 typeof('Hello World') === 'string'
 => true
 ```
-***** Due to how JavaScript was first implemented, `typeof(null)` returns `'object'`
+*****Due to how JavaScript was first implemented, `typeof(null)` returns `'object'`
 
 ---
 ### Numbers
@@ -171,6 +172,27 @@ If we try adding a number and a string, the number gets converted to a string:
 "5" + 6
 => "56"
 ```
+### Bonus: Template Literals
+Template literals are string literals that allow you to embed and splice expressions in a more flexible way.
+
+We use backticks to indicate the start of a template literal:
+```js
+// multi-line strings
+`Hello, this is Line 1!
+...and here is Line 2!
+`
+```
+
+Placeholders and more complex expressions can also be used:
+```js
+const firstName = 'Foo';
+const lastName = 'Bar';
+`Hello, ${firstName}`
+=> "Hello, Foo"
+
+`Bye, ${firstName + lastName}`
+=>"Bye, FooBar"
+```
 
 ---
 Note that you need to end the string with whatever type of quote you started out with:
@@ -190,38 +212,45 @@ You can escape a quote manually using a `\`
 ```
 ---
 ## Variables
-Variables are used to store data into a computer's memory so we can reference them later. We will always use the `var` keyword to declare a variable.*****
+Variables are used to store data into a computer's memory so we can reference them later. We will always use the `const`/`let` keywords to declare a variable.*****
 
 &nbsp;
 
 If we declare a variable without assigning it a value, its value is `undefined`:
 ```js
-var a;
+const a;
 a
 => undefined
 ```
 
-A separate issue is that `var a` by itself returns `undefined` in the `REPL`.
+A separate issue is that `const a` by itself returns `undefined` in the console.
 
 &nbsp;
 
-*****We'll talk about `const` and `let`, introduced in ES6, in a later class.
-
 ---
-By convention, all names should be `camelCased`, whether they're for variables or functions. There are certain reserved words we can't use for names, *e.g.* `var`, `function`, `class`, etc
+### Naming
+By convention, all names should be `camelCased`, whether they're for variables or functions.
+
 
 ```js
-var myScore = 100;
+const myScore = 100;
 ```
 ```js
-var myString = "Hello World!";
+const myString = "Hello World!";
 ```
+Good variables are descriptive.
+Bad variables are ambiguous.
 
+`$` and `_` are also valid variables.
+
+There are certain reserved words we can't/shouldn't use for names, *e.g.* `var`, `function`, `class`, etc.
+
+Do not use reserved keywords!
 ---
 ### Assignment Operators
 Values are assigned to a variable using `=`:
 ```js
-var num = 1;
+const num = 1;
 num;
 => 1
 ```
@@ -238,7 +267,7 @@ num += 5;
 ---
 We can use `++` and \-\- to increment and decrement by `1` respectively as postfix or prefix operators:
 ```js
-var num = 5;
+const num = 5;
 num;
 => 5
 
@@ -255,17 +284,11 @@ num;
 ### Number to String
 Use the `toString()` method on a number by itself, or on a variable that's storing the number:
 ```js
-var num = 1;
+const num = 1;
 num.toString();
 => "1"
 
 (1).toString();
-=> "1"
-
-1..toString();
-=> "1"
-
-1 .toString();
 => "1"
 
 // what does this return?
@@ -292,7 +315,7 @@ We'll store collections of data in arrays. They're great for storing, enumeratin
 Each item in an array is called an element, and each element has an index.
 
 ```js
-var friendsList = ['Moe', 'Larry', 'Curly'];
+const friendsList = ['Moe', 'Larry', 'Curly'];
 friendsList;
 => ['Moe', 'Larry', 'Curly']
 ```
@@ -304,8 +327,8 @@ The items in an array will always be returned in the same order. We start counti
 arrayVariable[index]
 ```
 ```js
-var friendsList = ['Moe', 'Larry', 'Curly'];
-var first = friendsList[0];
+const friendsList = ['Moe', 'Larry', 'Curly'];
+const first = friendsList[0];
 first;
 => 'Moe'
 
@@ -319,7 +342,7 @@ We can also reassign values to the array based on the index.
 arrayVariable[index] = newValue
 ```
 ```js
-var friendsList = ['Moe', 'Larry', 'Curly'];
+const friendsList = ['Moe', 'Larry', 'Curly'];
 friendsList[0] = "Sam";
 
 //what does friendsList[0] return?
@@ -329,7 +352,7 @@ friendsList[0] = "Sam";
 ### Length Property
 The `length` property of an array will give us `1` more than the last index. It's the number of items in the array. So, the index of the last element is always `length - 1`.
 ```js
-var friendsList = ['Moe', 'Larry', 'Curly'];
+const friendsList = ['Moe', 'Larry', 'Curly'];
 friendsList.length;
 => 3
 
@@ -365,12 +388,12 @@ simpleString[0];
 ### Creating Arrays
 We've seen the literal notation so far, and it's the notation we **should** use. There's also the constructor***** notation which you should **not** use.
 ```js
-var a = new Array();
+const a = new Array();
 a[0] = "dog";
 a;
 => ["dog"]
 
-var pets = new Array("dog", "cat", "tortoise");
+const pets = new Array("dog", "cat", "tortoise");
 pets;
 => ["dog", "cat", "tortoise"]
 ```
@@ -383,7 +406,7 @@ pets;
 ### Length Review
 The `length` property is `1` more than the last index.
 ```js
-var pets = ["dog", "cat", "tortoise"];
+const pets = ["dog", "cat", "tortoise"];
 pets[100] = "fish";
 
 //what does pets.length return?
@@ -394,7 +417,7 @@ pets[100] = "fish";
 
 ***** We would say this array has holes.
 ---
-###Array Helper Methods
+### Array Helper Methods
 There's quite a few array helper methods. You do **not** need to remember every method, but here's a complete list:
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Methods
 
@@ -430,14 +453,13 @@ a.unshift(item1, ..., itemN)
 *****Besides `toString()` and `join()`, these methods mutate, *i.e.* modify, the original array.
 
 ---
-![GeneralAssemb.ly](../../img/icons/code_along.png)
 
 In `Node`'s console, let's practice using the array helper methods. We're going to decode a secret message.
 
 ---
 ### Part 1. Array Creation and the .push() Method
 ```js
-var message = [];
+const message = [];
 
 message.push(8);
 => 1
@@ -452,7 +474,7 @@ message;
 ```
 
 ---
-### Part 2. .pop(), .shift(), and .unshift()
+###Part 2. .pop(), .shift(), and .unshift()
 ```js
 message.pop();
 => 'K'
@@ -465,7 +487,7 @@ message.unshift(1);
 ```
 
 ---
-### Part 3. Array Reversal Using .reverse()
+###Part 3. Array Reversal Using .reverse()
 ```js
 message.reverse();
 => [ 'G', 'A', 'i', 's', 'n', 'u',
@@ -473,7 +495,7 @@ message.reverse();
 ```
 
 ---
-### Part 4. Turning an Array into a String using .join()
+###Part 4. Turning an Array into a String using .join()
 ```js
 message.join(' ');
 => 'G A i s n u m b e r 1'
@@ -488,18 +510,18 @@ message.join(' ');
 Iterating through an array is a very common (and useful) practice in programming. Anytime we have an array, we will almost always iterate through the elements one at a time.
 
 ---
-### Iterating using a For Loop
+###Iterating using a For Loop
 We can***** manually iterate over the elements of an array using a `for` loop:
 ```js
-var articleTopics = ['cat videos', 'news', 'gossip'];
-for (var i = 0; i < articleTopics.length; i++) {
+const articleTopics = ['cat videos', 'news', 'gossip'];
+for (let i = 0; i < articleTopics.length; i++) {
     console.log(articleTopics[i]);
 }
 ```
 ```js
-var articleTopics = ['cat videos', 'news', 'gossip'];
+const articleTopics = ['cat videos', 'news', 'gossip'];
 //what's the difference between this and the top example?
-for (var i = 2; i < articleTopics.length; i++) {
+for (let i = 2; i < articleTopics.length; i++) {
     console.log(articleTopics[i]);
 }
 ```
@@ -517,7 +539,7 @@ We refer to this as a *callback* function; this is very common in JavaScript. Ea
 ### forEach() Method
 This syntax is much cleaner than the `for` loop we just saw:
 ```js
-var articleTopics = ['cat videos', 'news', 'gossip'];
+const articleTopics = ['cat videos', 'news', 'gossip'];
 articleTopics.forEach(function(topic) {
     console.log(topic);
 });
@@ -525,7 +547,6 @@ articleTopics.forEach(function(topic) {
 Take a look at the documentation: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
 
 ---
-![GeneralAssemb.ly](../../img/icons/code_along.png)
 
 ## Array Iteration Methods
 
@@ -550,11 +571,11 @@ You have eight minutes to skim the documentation on MDN (Mozilla's Developer Net
 ### Part 1. Setup
 Create an `exercise.js` file in your class 2 folder, and let's create two arrays.
 ```js
-var prices = [];
+const prices = [];
 prices.push(20, 44, 62, 80, 100);
 console.log(prices);
 
-var shirtColors = [];
+const shirtColors = [];
 shirtColors.push("red", "blue", "pink", "neon");
 console.log(shirtColors);
 ```
@@ -563,14 +584,14 @@ console.log(shirtColors);
 ### Part 2. .every()
 The `.every()` method tests whether **all** elements in an array pass the test implemented by the provided function.
 ```js
-var allLessThanFifty = prices.every(function(price) {
+const allLessThanFifty = prices.every(function(price) {
   return price < 50;
 });
 
 console.log("allLessThanFifty", allLessThanFifty);
 
 
-var allRedShirts = shirtColors.every(function(color) {
+const allRedShirts = shirtColors.every(function(color) {
   return color === "red";
 });
 
@@ -581,7 +602,7 @@ console.log("allRedShirts", allRedShirts);
 ### Part 3. .some()
 The `.some()` method tests whether **an** element in the array passes the test implemented by the provided function.
 ```js
-var someLessThanFifty = prices.some(function(price) {
+const someLessThanFifty = prices.some(function(price) {
   return price < 50;
 });
 
@@ -592,7 +613,7 @@ console.log("someLessThanFifty", someLessThanFifty);
 ### Part 4. .filter()
 The `.filter()` method **creates a new array** with all elements that pass the test implemented by the provided function. This method does not mutate the original array.
 ```js
-var lowPrices = prices.filter(function(price) {
+const lowPrices = prices.filter(function(price) {
   return price < 50;
 });
 
@@ -603,14 +624,14 @@ console.log("lowPrices", lowPrices);
 ### Part 5. .map()
 The `.map()` method creates a new array with the results of calling a provided function on every element in the original array.
 ```js
-var pricesDiscounted = prices.map(function(price) {
+const pricesDiscounted = prices.map(function(price) {
   return price * 0.9;
 });
 
 console.log("pricesDiscounted", pricesDiscounted);
 
 
-var shirtTitles = shirtColors.map(function(color) {
+const shirtTitles = shirtColors.map(function(color) {
   return color + " shirt";
 });
 
