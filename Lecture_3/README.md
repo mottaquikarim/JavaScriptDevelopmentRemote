@@ -70,7 +70,7 @@ if (1 > 0) {
 ```
 
 ---
-###Else Statement
+### Else Statement
 If `expr` does not evaluate to `true`, *i.e.* it's `false`, we can add an optional `else` clause to run a block of code.
 ```
 if (0 > 1) {
