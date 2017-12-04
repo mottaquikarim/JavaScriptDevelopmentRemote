@@ -1,45 +1,44 @@
+<!doctype html>
 <html>
 	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/css/reveal.min.css">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/css/theme/white.css">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.core.min.js"></script>
 	</head>
 	<body>
 		<div class="reveal">
-			<section data-markdown=""  
-				 data-separator="^\n\n\n">
-			</section>
+			<div class="slides">
+				<section data-markdown="" ></section>
+			</div>
 		</div>
 		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.core.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/js/reveal.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/plugin/markdown/marked.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/plugin/markdown/markdown.js"></script>
 		<script>
-			head.ready(() => {
-				const hashstr = window.location.search.substr(1);
-				const hasharr = hashstr.split('&')
-				const hashdict = hasharr.reduce((hash, arg) => {
-					const bits = arg.split('=')
-					hash[bits[0]] = bits[1]
-					return hash;
-				}, {});
-				const lecture = hashdict['lecture']
-				if (lecture) {
-					const url = `https://cdn.rawgit.com/mottaquikarim/JavaScriptDevelopmentRemote/8bc62aca/Lecture_${lecture}/README.md`	
-					const reveal = document.querySelector('.reveal section')
-					if (reveal) {
-						reveal.setAttribute('data-markdown', url);
-						Reveal.initialize({
-							dependencies: [
-								// Interpret Markdown in <section> elements
-								{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-								{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-							]	
-						});
-					}
-
+			const hashstr = window.location.search.substr(1);
+			const hasharr = hashstr.split('&')
+			const hashdict = hasharr.reduce((hash, arg) => {
+				const bits = arg.split('=')
+				hash[bits[0]] = bits[1]
+				return hash;
+			}, {});
+			const lecture = hashdict['lecture']
+			if (lecture) {
+				const url = `https://cdn.rawgit.com/mottaquikarim/JavaScriptDevelopmentRemote/8bc62aca/Lecture_${lecture}/README.md`	
+				const reveal = document.querySelector('.reveal section')
+				if (reveal) {
+					reveal.setAttribute('data-markdown', url);
+					Reveal.initialize({
+						dependencies: [
+							// Interpret Markdown in <section> elements
+							{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+							{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+						]	
+					});
 				}
-			})
+			}
 		</script>
 	</body>
 </html>
