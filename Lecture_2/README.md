@@ -623,10 +623,10 @@ We'll usually skim  first to learn as much as needed for the moment. Later, we c
 ### Research
 You have eight minutes to skim the documentation on MDN (Mozilla's Developer Network) for:
 
-* `.every()` - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every
-* `.some()` - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some
-* `.filter()` - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
-* `.map()` - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+* [`.every()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every)
+* [`.some()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some)
+* [`.filter()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
+* [`.map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 
 ---
 ### Part 1. Setup
@@ -698,3 +698,8 @@ const shirtTitles = shirtColors.map(function(color) {
 
 console.log("shirtTitles", shirtTitles);
 ```
+---
+
+That's it! 👍 Good job guys.
+
+**Remember**: practice makes perfect. Please practice these concepts on your own time and ask questions as they come!
