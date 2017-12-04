@@ -76,7 +76,7 @@ JavaScript has a standard library of `objects`, including `Array`, `Date`, `Math
 Let's use `Node.js`'s console to explore types.
 
 ---
-###Determining the Type
+### Determining the Type
 We can determine the type of a variable or value using `typeof()`*****, which returns a string.
 
 ```js
@@ -91,10 +91,10 @@ typeof({}) === 'object'
 typeof('Hello World') === 'string'
 => true
 ```
-*****Due to how JavaScript was first implemented, `typeof(null)` returns `'object'`
+***** Due to how JavaScript was first implemented, `typeof(null)` returns `'object'`
 
 ---
-###Numbers
+### Numbers
 In most programming languages, numbers are divided into two types, integers and floating point numbers.
 
 &nbsp;
@@ -110,7 +110,7 @@ In JavaScript, we only have floating point numbers, which results in cases like 
 => true
 ```
 ---
-###Arithmetic Operators
+### Arithmetic Operators
 We use operators to work with data in JavaScript. The standard arithmetic operators are available:
 ```js
 1 + 2
@@ -130,7 +130,7 @@ We use operators to work with data in JavaScript. The standard arithmetic operat
 ```
 
 ---
-###Additional Math Operators
+### Additional Math Operators
 For additional math operators, *e.g.* power, we can use the `Math` object
 ```js
 // 3^2 becomes
@@ -155,7 +155,7 @@ Math.round(3.99)
 ```
 
 ---
-###Strings
+### Strings
 Strings are a collection of characters. We'll use this type for words and text, *e.g.* `'John Doe'`. We can combine, or concatenate strings together, using the `+` operator:
 ```js
 // notice the space in "Hello "
@@ -189,7 +189,7 @@ You can escape a quote manually using a `\`
 => 'John\'s a JavaScript developer!'
 ```
 ---
-##Variables
+## Variables
 Variables are used to store data into a computer's memory so we can reference them later. We will always use the `var` keyword to declare a variable.*****
 
 &nbsp;
@@ -218,7 +218,7 @@ var myString = "Hello World!";
 ```
 
 ---
-###Assignment Operators
+### Assignment Operators
 Values are assigned to a variable using `=`:
 ```js
 var num = 1;
@@ -252,7 +252,7 @@ num;
 ```
 
 ---
-###Number to String
+### Number to String
 Use the `toString()` method on a number by itself, or on a variable that's storing the number:
 ```js
 var num = 1;
@@ -273,7 +273,7 @@ num.toString();
 ```
 
 ---
-###String to Number
+### String to Number
 Use the `Number()` method, and pass in the string. It will return `NaN`, or not-a-number for anything that's not parseable:
 ```js
 Number("5");
@@ -284,7 +284,7 @@ Number(":)");
 ```
 
 ---
-##Arrays
+## Arrays
 We'll store collections of data in arrays. They're great for storing, enumerating, and reordering data.
 
 &nbsp;
@@ -298,7 +298,7 @@ friendsList;
 ```
 
 ---
-###Indices
+### Indices
 The items in an array will always be returned in the same order. We start counting at `0`, so the first element has the index `0`. We can access an element at an index using bracket notation:
 ```js
 arrayVariable[index]
@@ -313,7 +313,7 @@ first;
 ```
 
 ---
-###Assignment Via Index
+### Assignment Via Index
 We can also reassign values to the array based on the index.
 ```js
 arrayVariable[index] = newValue
@@ -326,7 +326,7 @@ friendsList[0] = "Sam";
 //what does friendsList now look like?
 ```
 ---
-###Length Property
+### Length Property
 The `length` property of an array will give us `1` more than the last index. It's the number of items in the array. So, the index of the last element is always `length - 1`.
 ```js
 var friendsList = ['Moe', 'Larry', 'Curly'];
@@ -338,7 +338,7 @@ friendsList.length;
 
 
 ---
-###Types in Arrays
+### Types in Arrays
 JavaScript arrays can contain elements of any type, and the elements can be of different types*****. They can also dynamically grow and shrink in size.
 ```js
 var sillyArray = ["Hello World!", true, undefined, null,
@@ -362,7 +362,7 @@ simpleString[0];
 ```
 
 ---
-###Creating Arrays
+### Creating Arrays
 We've seen the literal notation so far, and it's the notation we **should** use. There's also the constructor***** notation which you should **not** use.
 ```js
 var a = new Array();
@@ -380,7 +380,7 @@ pets;
 *****We'll talk about constructors in-depth in a later class.
 
 ---
-###Length Review
+### Length Review
 The `length` property is `1` more than the last index.
 ```js
 var pets = ["dog", "cat", "tortoise"];
@@ -399,7 +399,7 @@ There's quite a few array helper methods. You do **not** need to remember every 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Methods
 
 ---
-###Notable***** Helper Methods
+### Notable***** Helper Methods
 ```js
 //returns a string with each element separated by a comma
 a.toString()
@@ -435,7 +435,7 @@ a.unshift(item1, ..., itemN)
 In `Node`'s console, let's practice using the array helper methods. We're going to decode a secret message.
 
 ---
-###Part 1. Array Creation and the .push() Method
+### Part 1. Array Creation and the .push() Method
 ```js
 var message = [];
 
@@ -452,7 +452,7 @@ message;
 ```
 
 ---
-###Part 2. .pop(), .shift(), and .unshift()
+### Part 2. .pop(), .shift(), and .unshift()
 ```js
 message.pop();
 => 'K'
@@ -465,7 +465,7 @@ message.unshift(1);
 ```
 
 ---
-###Part 3. Array Reversal Using .reverse()
+### Part 3. Array Reversal Using .reverse()
 ```js
 message.reverse();
 => [ 'G', 'A', 'i', 's', 'n', 'u',
@@ -473,7 +473,7 @@ message.reverse();
 ```
 
 ---
-###Part 4. Turning an Array into a String using .join()
+### Part 4. Turning an Array into a String using .join()
 ```js
 message.join(' ');
 => 'G A i s n u m b e r 1'
@@ -484,11 +484,11 @@ message.join(' ');
 ***** Although I agree, I can't take credit for the cheesiness of this exercise.
 
 ---
-##Iterating through an Array
+## Iterating through an Array
 Iterating through an array is a very common (and useful) practice in programming. Anytime we have an array, we will almost always iterate through the elements one at a time.
 
 ---
-###Iterating using a For Loop
+### Iterating using a For Loop
 We can***** manually iterate over the elements of an array using a `for` loop:
 ```js
 var articleTopics = ['cat videos', 'news', 'gossip'];
@@ -506,7 +506,7 @@ for (var i = 2; i < articleTopics.length; i++) {
 *****We will very rarely use this. There are simply better methods, with much cleaner syntax, to iterate through an array.
 
 ---
-###Array Iteration Methods
+### Array Iteration Methods
 JavaScript arrays have several *iteration* methods. Many of these methods require a function to be passed in as an argument.
 
 &nbsp;
@@ -514,7 +514,7 @@ JavaScript arrays have several *iteration* methods. Many of these methods requir
 We refer to this as a *callback* function; this is very common in JavaScript. Each element in the array has the statements in the function body applied to it individually.
 
 ---
-###forEach() Method
+### forEach() Method
 This syntax is much cleaner than the `for` loop we just saw:
 ```js
 var articleTopics = ['cat videos', 'news', 'gossip'];
@@ -527,10 +527,10 @@ Take a look at the documentation: https://developer.mozilla.org/en-US/docs/Web/J
 ---
 ![GeneralAssemb.ly](../../img/icons/code_along.png)
 
-##Array Iteration Methods
+## Array Iteration Methods
 
 ---
-###Reading Documentation
+### Reading Documentation
 Being able to read documentation and skim it quickly is extremely important. It's part of **eating your vegetables** as an engineer.
 
 &nbsp;
@@ -538,7 +538,7 @@ Being able to read documentation and skim it quickly is extremely important. It'
 We'll usually skim  first to learn as much as needed for the moment. Later, we can go back to fill in any missing details.
 
 ---
-###Research
+### Research
 You have eight minutes to skim the documentation on MDN (Mozilla's Developer Network) for:
 
 * `.every()` - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every
@@ -547,7 +547,7 @@ You have eight minutes to skim the documentation on MDN (Mozilla's Developer Net
 * `.map()` - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 
 ---
-###Part 1. Setup
+### Part 1. Setup
 Create an `exercise.js` file in your class 2 folder, and let's create two arrays.
 ```js
 var prices = [];
@@ -560,7 +560,7 @@ console.log(shirtColors);
 ```
 
 ---
-###Part 2. .every()
+### Part 2. .every()
 The `.every()` method tests whether **all** elements in an array pass the test implemented by the provided function.
 ```js
 var allLessThanFifty = prices.every(function(price) {
@@ -578,7 +578,7 @@ console.log("allRedShirts", allRedShirts);
 ```
 
 ---
-###Part 3. .some()
+### Part 3. .some()
 The `.some()` method tests whether **an** element in the array passes the test implemented by the provided function.
 ```js
 var someLessThanFifty = prices.some(function(price) {
@@ -589,7 +589,7 @@ console.log("someLessThanFifty", someLessThanFifty);
 ```
 
 ---
-###Part 4. .filter()
+### Part 4. .filter()
 The `.filter()` method **creates a new array** with all elements that pass the test implemented by the provided function. This method does not mutate the original array.
 ```js
 var lowPrices = prices.filter(function(price) {
@@ -600,7 +600,7 @@ console.log("lowPrices", lowPrices);
 ```
 
 ---
-###Part 5. .map()
+### Part 5. .map()
 The `.map()` method creates a new array with the results of calling a provided function on every element in the original array.
 ```js
 var pricesDiscounted = prices.map(function(price) {
