@@ -18,7 +18,6 @@
 		<script src="https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/plugin/markdown/marked.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/plugin/markdown/markdown.js"></script>
 		<script>
-			head.ready(() => {
 				const hashstr = window.location.search.substr(1);
 				const hasharr = hashstr.split('&')
 				const hashdict = hasharr.reduce((hash, arg) => {
@@ -35,7 +34,6 @@
 						Reveal.initialize();
 					}
 				}
-			})
 		</script>
 	</body>
 </html>
