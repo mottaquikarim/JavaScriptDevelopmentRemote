@@ -70,7 +70,7 @@ In JavaScript, we have five `primitive` types:
 * `boolean`
 * `undefined`
 * `null`
-* `symbol`*****
+* `symbol` (es6 specific, will expound when necessary)
 
 -
 
@@ -79,6 +79,22 @@ Everything else, is an `object`, including:
 * `arrays` *e.g.* `[]`, `['apple', 'orange']`
 * `functions`, *e.g.*, `function foo() {}`
 * `objects`, *e.g.* `{}`, `{ name: 'John Smith' }`
+
+-
+
+*functions* in particular are both powerful and wonderful. we will discuss them in depth later but for now just know that they are essentially black boxes that take inputs does some calculation/logic/something useful, and returns to you an output
+
+-
+
+In javascript, anything that has `()` after it is a function, ie:
+
+```js
+foo() // is a function, it's a word with the ()
+bar{} // is a function, it's a word with the ()
+$baz() // is a function, it's a word with the ()
+...
+etc
+```
 
 ---
 JavaScript has a standard library of `objects`, including `Array`, `Date`, `Math`, and `Function` with their own built-in methods. There is also a core set of language elements, such as:
@@ -180,6 +196,8 @@ Strings are a collection of characters. We'll use this type for words and text, 
 => "Hello World!"
 ```
 
+-
+
 If we try adding a number and a string, the number gets converted to a string:
 ```js
 "3" + 3
@@ -188,6 +206,7 @@ If we try adding a number and a string, the number gets converted to a string:
 "5" + 6
 => "56"
 ```
+---
 ### Bonus: Template Literals
 Template literals are string literals that allow you to embed and splice expressions in a more flexible way.
 
@@ -198,6 +217,8 @@ We use backticks to indicate the start of a template literal:
 ...and here is Line 2!
 `
 ```
+
+-
 
 Placeholders and more complex expressions can also be used:
 ```js
@@ -219,7 +240,7 @@ Note that you need to end the string with whatever type of quote you started out
 
 Depending on the environment, the quote may appear as escaped or unescaped.
 
-&nbsp;
+-
 
 You can escape a quote manually using a `\`
 ```js
@@ -230,7 +251,7 @@ You can escape a quote manually using a `\`
 ## Variables
 Variables are used to store data into a computer's memory so we can reference them later. We will always use the `const`/`let` keywords to declare a variable.*****
 
-&nbsp;
+-
 
 If we declare a variable without assigning it a value, its value is `undefined`:
 ```js
@@ -240,8 +261,6 @@ a
 ```
 
 A separate issue is that `const a` by itself returns `undefined` in the console.
-
-&nbsp;
 
 ---
 ### Naming
