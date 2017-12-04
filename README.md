@@ -16,7 +16,7 @@ Here are all the lectures for this course. This section will be updated with not
 
 ### [Lecture 2: Data Types](Lecture_2) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=2)
 
-### [Lecture 3: Conditionals And Loops](Lecture_3)
+### [Lecture 3: Conditionals And Loops](Lecture_3) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=3)
 
 
 ## Your Instructional Team
