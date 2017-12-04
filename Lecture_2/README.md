@@ -96,6 +96,28 @@ $baz() // is a function, it's a word with the ()
 etc
 ```
 
+-
+
+Also note that objects can have functions in them!
+
+```js
+const belle = {
+    speak: function() {
+        return 'meow'
+    }
+}
+```
+
+We call functions that are defined to be a property of an object **methods**. 
+
+-
+
+It's easy to tell if something is a method, look for a `.` before the word and `()` after it
+
+```js
+console.log() // method! log is a FUNCTION that's a property of the console object.
+```
+
 ---
 JavaScript has a standard library of `objects`, including `Array`, `Date`, `Math`, and `Function` with their own built-in methods. There is also a core set of language elements, such as:
 
@@ -273,6 +295,9 @@ const myScore = 100;
 ```js
 const myString = "Hello World!";
 ```
+
+-
+
 Good variables are descriptive.
 Bad variables are ambiguous.
 
@@ -406,7 +431,7 @@ var sillyArray = ["Hello World!", true, undefined, null,
 
 &nbsp;
 
-*****Well-written code should not have an array where the elements are of different types, unless the different type is `null` or `undefined`. Even then, not desirable.
+<small>**Well-written code should not have an array where the elements are of different types, unless the different type is `null` or `undefined`. Even then, not desirable.**</small>
 
 ---
 Strings are array-like. We can use the `length` property to get the number of characters, and bracket notation to get a character at an index.
@@ -435,7 +460,7 @@ pets;
 
 &nbsp;
 
-*****We'll talk about constructors in-depth in a later class.
+**We'll talk about constructors in-depth in a later class.**
 
 ---
 ### Length Review
@@ -453,11 +478,11 @@ pets[100] = "fish";
 ***** We would say this array has holes.
 ---
 ### Array Helper Methods
-There's quite a few array helper methods. You do **not** need to remember every method, but here's a complete list:
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Methods
+There's quite a few array helper methods. You do **not** need to remember every method, but here's a **[complete list](
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Methods)**
 
 ---
-### Notable***** Helper Methods
+### Notable Helper Methods
 ```js
 //returns a string with each element separated by a comma
 a.toString()
@@ -509,7 +534,7 @@ message;
 ```
 
 ---
-###Part 2. .pop(), .shift(), and .unshift()
+### Part 2. .pop(), .shift(), and .unshift()
 ```js
 message.pop();
 => 'K'
@@ -522,7 +547,7 @@ message.unshift(1);
 ```
 
 ---
-###Part 3. Array Reversal Using .reverse()
+### Part 3. Array Reversal Using .reverse()
 ```js
 message.reverse();
 => [ 'G', 'A', 'i', 's', 'n', 'u',
@@ -530,7 +555,7 @@ message.reverse();
 ```
 
 ---
-###Part 4. Turning an Array into a String using .join()
+### Part 4. Turning an Array into a String using .join()
 ```js
 message.join(' ');
 => 'G A i s n u m b e r 1'
@@ -538,15 +563,15 @@ message.join(' ');
 
 &nbsp;
 
-***** Although I agree, I can't take credit for the cheesiness of this exercise.
+**Yes, this is cheesy 🧀**
 
 ---
 ## Iterating through an Array
 Iterating through an array is a very common (and useful) practice in programming. Anytime we have an array, we will almost always iterate through the elements one at a time.
 
 ---
-###Iterating using a For Loop
-We can***** manually iterate over the elements of an array using a `for` loop:
+### Iterating using a For Loop
+We can manually iterate over the elements of an array using a `for` loop:
 ```js
 const articleTopics = ['cat videos', 'news', 'gossip'];
 for (let i = 0; i < articleTopics.length; i++) {
@@ -560,7 +585,10 @@ for (let i = 2; i < articleTopics.length; i++) {
     console.log(articleTopics[i]);
 }
 ```
-*****We will very rarely use this. There are simply better methods, with much cleaner syntax, to iterate through an array.
+
+-
+
+We will very rarely use this. There are simply better methods, with much cleaner syntax, to iterate through an array.
 
 ---
 ### Array Iteration Methods
@@ -579,7 +607,7 @@ articleTopics.forEach(function(topic) {
     console.log(topic);
 });
 ```
-Take a look at the documentation: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
+Take a look at the [documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
 
 ---
 
@@ -588,8 +616,6 @@ Take a look at the documentation: https://developer.mozilla.org/en-US/docs/Web/J
 ---
 ### Reading Documentation
 Being able to read documentation and skim it quickly is extremely important. It's part of **eating your vegetables** as an engineer.
-
-&nbsp;
 
 We'll usually skim  first to learn as much as needed for the moment. Later, we can go back to fill in any missing details.
 
