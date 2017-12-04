@@ -17,7 +17,7 @@
 			const hashstr = window.location.search.substr(1);
 			const hasharr = hashstr.split('&')
 			const hashdict = hasharr.reduce((hash, arg) => {
-				const bits = hash.split('=')
+				const bits = arg.split('=')
 				hash[bits[0]] = bits[1]
 				return hash;
 			}, {});
