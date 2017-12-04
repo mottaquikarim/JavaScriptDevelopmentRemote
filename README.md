@@ -14,7 +14,7 @@ This body of text is a living document. It will be updated with course and lectu
 ## Table of Contents
 Here are all the lectures for this course. This section will be updated with notes as we make our way through the curriculum.
 
-### [Lecture 2: Data Types](Lecture_2)
+### [Lecture 2: Data Types](Lecture_2) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=2)
 
 ### [Lecture 3: Conditionals And Loops](Lecture_3)
 
