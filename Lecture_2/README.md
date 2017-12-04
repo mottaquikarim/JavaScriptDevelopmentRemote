@@ -1,6 +1,4 @@
-# Data Types
-## Class 2
-&nbsp;
+# Lecture 2: Data Types
 
 ### Wesley Yu
 
