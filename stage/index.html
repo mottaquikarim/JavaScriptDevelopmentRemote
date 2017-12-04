@@ -68,6 +68,7 @@
 				title.innerHTML = `🙌 Lecture ${lecture} 🙌`
 				reveal.setAttribute('data-markdown', url);
 				Reveal.initialize({
+					history: true,
 					dependencies: [
 						{ src: 'https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 						{ src: 'https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
