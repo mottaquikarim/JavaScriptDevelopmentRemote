@@ -32,7 +32,9 @@ From a data type, we can determine:
 
 ---
 
-Most programming languages have the following data types
+Most programming languages have the following data types. 👇
+
+-
 
 * `strings` : single words or sentences surrounded by double or single quote, e.g. `'Hello World'`
 
@@ -70,17 +72,13 @@ In JavaScript, we have five `primitive` types:
 * `null`
 * `symbol`*****
 
-&nbsp;
+-
 
 Everything else, is an `object`, including:
 
 * `arrays` *e.g.* `[]`, `['apple', 'orange']`
 * `functions`, *e.g.*, `function foo() {}`
 * `objects`, *e.g.* `{}`, `{ name: 'John Smith' }`
-
-&nbsp;
-
-***** Introduced in ES6. Let's not worry about them for now.
 
 ---
 JavaScript has a standard library of `objects`, including `Array`, `Date`, `Math`, and `Function` with their own built-in methods. There is also a core set of language elements, such as:
@@ -90,13 +88,13 @@ JavaScript has a standard library of `objects`, including `Array`, `Date`, `Math
 * statements, *e.g.* `var x = 2;`
 
 ---
-##Data Types
+## Data Types
 
 Let's use `Node.js`'s console to explore types.
 
 ---
 ### Determining the Type
-We can determine the type of a variable or value using `typeof()`*****, which returns a string.
+We can determine the type of a variable or value using `typeof()` (which returns a string).
 
 ```js
 typeof(10) === 'number'
@@ -110,13 +108,13 @@ typeof({}) === 'object'
 typeof('Hello World') === 'string'
 => true
 ```
-*****Due to how JavaScript was first implemented, `typeof(null)` returns `'object'`
+*Due to how JavaScript was first implemented, `typeof(null)` returns `'object'`*
 
 ---
 ### Numbers
 In most programming languages, numbers are divided into two types, integers and floating point numbers.
 
-&nbsp;
+-
 
 In JavaScript, we only have floating point numbers, which results in cases like these:
 ```js
