@@ -11,9 +11,7 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/monokai-sublime.css">
 		
 		<style>
-			.reveal {
-  				font-family: 'Roboto', sans-serif;
-			}
+			.reveal { font-family: 'Roboto', sans-serif; }
 			.reveal h1,
 			.reveal h2,
 			.reveal h3,
@@ -37,34 +35,48 @@
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/lib/js/head.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/js/reveal.min.js"></script>
-<!-- 		<script src="https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/plugin/markdown/marked.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/plugin/markdown/markdown.js"></script> -->
 		<script>
+			const getHashDict = () => {
 				const hashstr = window.location.search.substr(1);
 				const hasharr = hashstr.split('&')
-				const hashdict = hasharr.reduce((hash, arg) => {
+				return hasharr.reduce((hash, arg) => {
 					const bits = arg.split('=')
 					hash[bits[0]] = bits[1]
 					return hash;
 				}, {});
+			};
+			
+			const fetchLecture = hashdict => {
+				title = document.querySelector('title');
 				const lecture = hashdict['lecture']
-				if (lecture) {
-					// 'https://testing.webscript.io/'; //
-					const url = `https://cdn.rawgit.com/mottaquikarim/JavaScriptDevelopmentRemote/master/Lecture_${lecture}/README.md`
-					      
-					const reveal = document.querySelector('.reveal section')
-					if (reveal) {
-						document.querySelector('title').innerHTML = `Lecture ${lecture}`
-						reveal.setAttribute('data-markdown', url);
-						Reveal.initialize({
-							dependencies: [
-								{ src: 'https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					    			{ src: 'https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-								{ src: 'https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-							]	
-						});
-					}
+				if (!lecture) {
+					title.innerHTML = `✋ Failed To Load`
+					alert('✋ Sorry, the "lecture" query param was not found, slides will not load.')
+					return;	
 				}
+
+				const url = `https://cdn.rawgit.com/mottaquikarim/JavaScriptDevelopmentRemote/master/Lecture_${lecture}/README.md`
+
+				const reveal = document.querySelector('.reveal section')
+				if (!reveal) {
+					title.innerHTML = `✋ Failed To Load`
+					alert('✋ Sorry, could not find proper container for slideshow, slides will not load.')
+					return;
+				}
+
+				title.innerHTML = `🙌 Lecture ${lecture} 🙌`
+				reveal.setAttribute('data-markdown', url);
+				Reveal.initialize({
+					dependencies: [
+						{ src: 'https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+						{ src: 'https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+						{ src: 'https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					]	
+				});
+			};
+			
+			// init 
+			fetchLecture(getHashDict());
 		</script>
 	</body>
 </html>
