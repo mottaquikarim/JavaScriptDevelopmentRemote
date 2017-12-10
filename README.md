@@ -20,6 +20,8 @@ Here are all the lectures for this course. This section will be updated with not
 
 ### [Lecture 4: Functions and Scope](Lecture_4) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=4)
 
+### [Lecture 4: Functions and Scope](Lecture_5) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=5)
+
 
 ## Your Instructional Team
 
