@@ -602,7 +602,7 @@ getScore();
 
 ---
 
-## Rock Paper Scissors Lab
+## Rock Paper Scissors Lab / Homework
 
 Please work in groups of 2-3.
 
@@ -649,11 +649,3 @@ Please work in groups of 2-3.
 */
 
 ```
-
----
-
-## Extra Practice
-
-**[Check these out](https://medium.com/@the_taqquikarim/an-exhaustive-list-of-practice-content-50e1a6f4f498)**.
-
-(Under **PSETS** in particular. NB: you will need to make an account for [Samantha](http://samantha.fewd.us/#/), an in-browser code editor that Taq built)
