@@ -1,7 +1,7 @@
 # Lecture 4: Functions and Scope
 
-### Taq Karim
-Senior Software Engineer, Intersection
+### Wes Yu
+JavaScript Engineer, Honey
 
 ---
 
@@ -20,45 +20,43 @@ Senior Software Engineer, Intersection
 * Return Statement
 * Introduction to Scope
 * Using Global and Local Scope
-* Rock Paper Scissors Lab
 
 ---
 ## Introduction to Functions
-A function is a reusable statement, or a group of reusable statements, that can be called anywhere in a program*****. This avoids the need to rewrite the same statement(s) over and over again.
+A function is a reusable statement or group of statements that can be invoked anywhere in a program. 
 
-&nbsp;
+-
 
-Functions also enable us to divide a large, unwieldy piece of code into smaller, more manageable pieces.
+### Why  Functions, tho?
 
-&nbsp;
-
-*****As long as we have access to it.
+* we no longer have to rewrite the same statements over and over again.
+* gives us the ability to write reusable, modular code that is easy to test and maintain
+	* especially when dealing with complex features that span hundreds or thousands of lines of code.
 
 ---
-A critical component of programming, functions address a key tenet of engineering: Don't Repeat Yourself, or **DRY**.
+A critical component of programming, functions address a key tenet of engineering: 
 
-&nbsp;
+**Don't Repeat Yourself**, 
+
+or
+
+**DRY**.
+
+-
 
 Our goal is to create programs with as few lines as possible, while maintaining clarity.
 
 ---
-In JavaScript, functions are considered **first-class citizens**.
+## In JavaScript, every function:
 
-As a consequence, JavaScript also has **higher-order** functions.
-
----
-In JavaScript, every function:
-
-* is an an `object`*****
-* can have properties*****
-* has a link to its constructor method*****
+* is an an `object`
+* can have properties
+* has a link to its constructor method 
 * can be stored in a variable
-* can be returned from another function*****
-* can be passed into another function as an argument*****
+* can be returned from another function
+* can be passed into another function as an argument
 
-&nbsp;
-
-***** We'll go over these concepts at length in later classes.
+NB: some of these concepts will be defined / expounded upon in depth in subsequent lectures
 
 ---
 ## Function Declarations
@@ -72,25 +70,37 @@ Although there are several ways to define a function, the two most common method
 ### Function Declaration
 ```js
 function speak(words) {
-  console.log(words);
+	console.log(words);
+	return words;
 } // no semicolon
 ```
 
-&nbsp;
+-
 
 ### Function Expression
 ```js
-var speak = function(words) {
-  console.log(words);
+const speak = function(words) {
+	console.log(words);
+	return words;
+}; // notice the semicolon
+```
+
+-
+
+### Arrow Function Expression
+```js
+const speak = (words) => {
+	console.log(words);
+	return words;
 }; // notice the semicolon
 ```
 
 ---
-Both methods share similarities, but only function declarations allow us to call the function before it's defined.*****
+Both methods share similarities, but only function declarations allow us to call the function before it's defined.
 
-&nbsp;
+-
 
-*****We'll see why later. It's related to a concept called hoisting.
+Generally the preferred method of function creation is to use function expressions whenever possible; in particular use _arrow_ function expressions whenever possible.
 
 ---
 ### Function Declaration
@@ -108,8 +118,9 @@ function speak(words) {
 ```js
 speak('hello world!');
 
-var speak = function(words) {
-  console.log(words);
+const speak = function(words) {
+	console.log(words);
+	return words;
 };
 // TypeError: undefined is not a function
 ```
@@ -121,15 +132,59 @@ Function declarations have the following:
 * a name for the function after the `function` keyword
 * statements inside the the function body (which get executed every time the function is called) inside the `{}`
 * an optional list of parameters inside `()` with multiple parameters separated by a comma
+* a `return` keyword, which is a special keyword that "gives" back a calculation from within the function itself (more on this when we talk about scope)
 
-&nbsp;
+-
 
 What is the name, statement(s), and parameters for the function declaration below?
 ```js
 function speak(words) {
-  console.log(words);
+	console.log(words);
+	return words;
 }
 ```
+
+---
+### Details about Arrow Function Declarations
+
+Basic syntax:
+
+```
+const speak = (words) => {
+	console.log(words);
+	return words;
+}
+```
+
+-
+
+If only one parameter is needed...
+```
+const speak = words => {
+	console.log(words);
+	return words;
+}
+// notice that the parenthesis are gone now - works
+// ONLY for functions with one param
+```
+
+-
+
+if only one statement is in the function...
+```
+
+const speak = words => {
+	return `Hello, ${words}`;
+}
+
+// same as...
+
+const speak = words => `Hello, ${words}`;
+
+```
+
+* ofc that's kind of a lame usecase, but mainly helpful to show different ways arrow functions can be used
+* the terse syntax is both a blessing and a curse
 
 ---
 ### Calling Functions
@@ -137,11 +192,11 @@ Calling, or invoking, a function executes the code defined inside the function.
 
 &nbsp;
 
-Defining and calling a function are two different acts. A function will not be called when it's defined*****.
+Defining and calling a function are two different acts. Typically, a function will not be called when it's defined.
 
-&nbsp;
+-
 
-*****We'll see how to immediately invoke a function expression in a later class.
+It *is* possible to define and immediately invoke  a function, we'll see how to immediately invoke a function expression in a later class.
 
 ---
 We can call a function by using parentheses after it's name.
@@ -169,7 +224,23 @@ var person = {
 person.speak();
 //=> 'Hello World!'
 ```
-*****We'll talk about objects in-depth later.
+
+-
+
+Note that this is equally valid:
+
+```js
+var person = {
+  speak: () => console.log('Hello World!'),
+};
+
+person.speak();
+//=> 'Hello World!'
+```
+
+If a function is to be only one line, then the _arrow_ function expression format allows us to ignore the `{}` entirely. This makes for terse code but not necessarily more readable code. 
+
+It's a matter of preference, mainly.
 
 ---
 ## Parameters and Arguments
@@ -197,39 +268,46 @@ We can call the same function with different values by using parameters:
 ```js
 function sayHello(name) {
     // name is a parameter
-    console.log('Hello ' + name);
+    return 'Hello ' + name;
 }
 
 // 'Mark' is an argument
-sayHello('Mark');
+console.log(sayHello('Mark'));
 //=> 'Hello Mark'
 
-sayHello('Steven');
+console.log(sayHello('Steven'));
 //=> 'Hello Steven'
 ```
 
----
-**Parameters** refer to the variables defined in the function's declaration. **Arguments** refer to the actual values passed into the function when it's called.
+-
+
+**Parameters** refer to the variables defined in the function's declaration. 
+
+**Arguments** refer to the actual values passed into the function when it's called.
+
+-
 
 ```js
 function fn(param) {
     //param is the parameter
 }
 
-fn(arg);
-//arg is the argument
+fn(5);
 ```
 
-Note that parameters from one function will never affect parameters in another function as long as they're not nested. Parameters are local to each function.
+Above:
+* 5 is the argument
+* calling fn(5) will take us to the definition above
+* and set param = 5
 ---
 Use a comma-separated list to write a function with more than one parameter. Each **p**arameter **p**arks its **p**lace for the argument passed in when the function is called.
 
 ```js
 function sum(x, y, z) {
-  console.log(x + y + z);
+  return x + y + z;
 }
 
-sum(1, 2, 3);
+console.log(sum(1, 2, 3));
 //=> 6
 
 // With those arguments
@@ -239,23 +317,30 @@ sum(1, 2, 3);
 ---
 JavaScript functions don't perform type checking. We can't specify the type of a parameters when defining the function.
 
-&nbsp;
+-
 
-To prevent errors, we can write checks to verify the types are correct. We'll almost always use the same type***** for the same parameter every time we call the function.
+To prevent errors, we can write checks to verify the types are correct. We'll almost always use the same type for the same parameter every time we call the function.
 
-&nbsp;
+-
 
-*****The parameters in the function definition can be of different types.
+The parameters in the function definition can be of different types.
 
 ---
 ## Return Statement
-If we want to update a variable using values computed in a function or pass it into another function, we'll use a `return` statement.
 
-&nbsp;
+**THIS IS REALLY IMPORTANT, FAM**
+
+
+Functions are only useful if they *return* something.
+
 
 Using the `return` statement ends the function's execution and "spits out" the value we're returning.
 
-&nbsp;
+-
+
+If we want to update a variable using values computed in a function or pass it into another function, we'll use a `return` statement.
+
+-
 
 By default, all functions in JavaScript return `undefined`. Even if we don't have the `return` keyword in our function body, it will return `undefined`.
 
@@ -266,28 +351,31 @@ function sum(x, y) {
     return x + y;
 }
 
-var z = sum(3, 4);
+const z = sum(3, 4);
 //=> 7 // returned from sum(3, 4);
 
 console.log(z);
 //=> 7 // assigned to variable z
+
+console.log(sum(3,4))
+//=> alternative to storing in z and console.logging
 ```
 
 ---
 ### Passing a Function Call into a Function Call
 ```js
-var num = sum(3, 4);
+const num = sum(3, 4);
 //=> 7
 
 function double(x) {
     return x * 2;
 }
 
-var numDouble = double(num);
+const numDouble = double(num);
 //=> 14
 
 // We can write the above with:
-var numDouble = double(sum(3, 4));
+const numDouble = double(sum(3, 4));
 //=> 14
 //sum(3, 4) will return 7
 //7 is then passed into double()
@@ -302,8 +390,8 @@ function speak(words) {
   return;
 
   // The following statements will not run:
-  var numOne = 1;
-  var numTwo = 2;
+  const numOne = 1;
+  const numTwo = 2;
   console.log(words);
 }
 //what will speak("hi") return?
@@ -314,29 +402,29 @@ function speak(words) {
 
 ```js
 function isTweetInRange(text, longerSizeEnabled) {
-  var longerSize = 280;
-  var defaultSize = 140;
-  var maxLength = longerSizeEnabled ?
+  const longerSize = 280;
+  const defaultSize = 140;
+  const maxLength = longerSizeEnabled ?
     longerSize : defaultSize;
 
   return text.length <= maxLength;
 }
 
-isTweetInRange("Hello World");
+console.log(isTweetInRange("Hello World"));
 //=> true
 ```
 ---
 ### Cities Markup Function
 
 ```js
-var cities = ["NYC", "SF", "Sydney", "London"];
+const cities = ["NYC", "SF", "Sydney", "London"];
 
 function getSingleLocationMarkup(location) {
   return "<div>" + location + "</div>";
 }
 
 function getLocationsMarkup(locations) {
-  var markup = locations.map(getSingleLocationMarkup);
+  const markup = locations.map(getSingleLocationMarkup);
   // equivalent to below!
   // var markup = locations.map(function(location) {
   //   return "<div>" + location + "</div>";
@@ -344,14 +432,30 @@ function getLocationsMarkup(locations) {
   return markup.join("");
 }
 
-getLocationsMarkup(cities);
+console.log(getLocationsMarkup(cities));
+// => what does this return...?
+```
+
+-
+
+Using arrow functions only...
+```js
+const cities = ["NYC", "SF", "Sydney", "London"];
+
+// notice how you no longer need the return keyword here
+// because it's a one liner the return is implied
+const getSingleLocationMarkup = location =>  "<div>" + location + "</div>";
+
+const getLocationsMarkup = locations => locations
+	.map(getSingleLocationMarkup)
+	.join("");
+console.log(getLocationsMarkup(cities));
+// => what does this return...?
 ```
 
 ---
 ## Introduction to Scope
 Scope is a concept present in programming languages. It refers to the current context of execution, with context being which values can be referenced.
-
-&nbsp;
 
 If a variable is **not** in (the current) scope, then we can't use it because we don't have access to it.
 
@@ -372,20 +476,23 @@ console.log(words);
 ### Global Scope
 By default, we're in the **global** scope. Anytime a variable is declared outside of a function, it is part of the global scope.
 
-&nbsp;
+-
 
 We would call such a variable a **global** variable.
 
-&nbsp;
+-
 
 Global variables are bad practice because it's easy to accidentally overwrite the value of a variable. Any function or expression on the page can reference and alter a global variable.
 
 ---
 The environment for global variables is accessible via the **global** object. In the browser, this is the `window` object. In `Node`, it's the `global` or `GLOBAL` object. All global variables are attached to the global object.
 
+-
+
+
 ```js
 // message is part of the global scope
-var message = "Hi Students!";
+const message = "Hi Students!";
 
 console.log(message);
 //=> "Hi Students!"
@@ -404,27 +511,23 @@ console.log(global.message);
 ### Namespace
 A **namespace** is a container for a set of variables and objects, *e.g.* functions, etc.
 
-&nbsp;
+-
 
 We don't want to pollute the global **namespace**.
-
-&nbsp;
 
 We'll soon see how we can create namespaces to organize our code. Namespacing is a way for us to prevent collisions with other objects or variables.
 
 ---
 ### Local Scope
-We create a new scope whenever we declare a function. Inside the function body, we have access to variables declared inside of that function and in the outer scope. Any variables declared inside of that function are local to it. *****
+We create a new scope whenever we declare a function. Inside the function body, we have access to variables declared inside of that function and in the outer scope. Any variables declared inside of that function are local to it. 
 
-&nbsp;
-
-*****A function nested inside of a function has access to the outer function's variables.
+NB: A function nested inside of a function has access to the outer function's variables.
 
 ---
 ```js
-var globalNum = 1;
+const globalNum = 1;
 function scopeHelper() {
-    var localNum = 2;
+    const localNum = 2;
     console.log(globalNum);
     console.log(localNum);
 }
@@ -456,10 +559,15 @@ console.log(localString);
 
 ---
 ### Accessing Outer Scope Example
-A function can access variables of the parent scope. Therefore, a function defined in the global scope can access all the variables defined in the global scope*****.
+A function can access variables of the parent scope. Therefore, a function defined in the global scope can access all the variables defined in the global scope
+
+(Example below)
+
+-
+
 ```js
 // Global Scope
-var prefix = "Hello";
+const prefix = "Hello";
 
 // sayHello is defined in the global scope
 function sayHello(name) {
@@ -470,17 +578,16 @@ function sayHello(name) {
 sayHello("JavaScript");
 => "Hello JavaScript";
 ```
-***** If it's a function declaration, we can also call it anywhere that has access to the global scope.
 
 ---
 ### Nested Function Scope Example
 When a function is defined inside of another function, it's possible to access variables defined in the outer function from the inner function:
 ```js
-var numOne = 1;
+const numOne = 1;
 
 function getScore() {
-  var numTwo = 2;
-  var numThree = 3;
+  const numTwo = 2;
+  const numThree = 3;
 
   function add() {
       return numOne + numTwo + numThree;
@@ -494,13 +601,59 @@ getScore();
 ```
 
 ---
-![GeneralAssemb.ly](../../img/icons/exercise_icon_md.png)
+
 ## Rock Paper Scissors Lab
 
----
-## Rock Paper Scissors Lab
 Please work in groups of 2-3.
 
-&nbsp;
+```
+/*
+    @func rockPaperScissors
+    @param {string} player1
+    @param {string} player2
+    @returns {number}
+    @desc - given a player1 and player2
+            returns 1 if player1 has won
+            returns 2 if player2 has won
+            returns 0 if tie
+            returns -1 if invalid input
+            expects both player1 and player2 inputs to be either
+            "rock", "paper", or "scissors"
+    
+    @example rockPaperScissors( "rock", "paper" ); // 2
+    @example rockPaperScissors( "rock", "scissors"); // 1
+    @example rockPaperScissors( "rock", "rock" ); // 0
+    @example rockPaperScissors( "r", "p" ); // -1
+    @example rockPaperScissors( "r" ); // -1
+    @example rockPaperScissors(); // -1
+*/
+```
 
-The instructions are in `app.js` in the starter code folder. You can use `node` or `repl.it`.
+-
+
+```
+/*
+    @func RPSwithComputer
+    @param {string} player
+    @returns {number}
+    @desc - given a player,
+            randomly selects a "choice" for the computer
+            RUNS rockPaperScissors from before with computer's choice
+            as `player2`
+            expect same results as above
+
+    @example rockPaperScissors( "rock" ); // 2, if computer won
+    @example rockPaperScissors( "rock" ); // 1, if player won
+    @example rockPaperScissors( "rock" ); // 0, if tied
+    @example rockPaperScissors(); // -1
+*/
+
+```
+
+---
+
+## Extra Practice
+
+**[Check these out](https://medium.com/@the_taqquikarim/an-exhaustive-list-of-practice-content-50e1a6f4f498)**.
+
+(Under **PSETS** in particular. NB: you will need to make an account for [Samantha](http://samantha.fewd.us/#/), an in-browser code editor that Taq built)
