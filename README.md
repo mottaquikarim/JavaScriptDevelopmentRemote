@@ -18,7 +18,7 @@ Here are all the lectures for this course. This section will be updated with not
 
 ### [Lecture 3: Conditionals And Loops](Lecture_3) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=3) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_3/class_notes)
 
-### [Lecture 4: Functions and Scope](Lecture_4) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=4)
+### [Lecture 4: Functions and Scope](Lecture_4) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=4) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_4/class_notes)
 
 ### [Lecture 5: Slackbot Lab](Lecture_5) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=5)
 
