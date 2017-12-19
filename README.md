@@ -22,7 +22,7 @@ Here are all the lectures for this course. This section will be updated with not
 
 ### [Lecture 5: Slackbot Lab](Lecture_5) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=5) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_5/class_notes) | [Homework #1](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_5/homework)
 
-### [Lecture 6: Functions Cont'd](Lecture_6) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=6)
+### [Lecture 6: Functions Cont'd](Lecture_6) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=6) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_6/class_notes)
 
 
 
