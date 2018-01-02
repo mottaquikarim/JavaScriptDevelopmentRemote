@@ -26,6 +26,8 @@ Here are all the lectures for this course. This section will be updated with not
 
 ### [Lecture 7: Using Objects](Lecture_7) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=7) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_7/class_notes)
 
+### [Lecture 8: Document Object Model](Lecture_8) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=8) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_8/class_notes)  | [Homework #2](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_8/homework)
+
 
 
 ## Your Instructional Team
