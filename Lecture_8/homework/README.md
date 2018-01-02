@@ -10,3 +10,5 @@ We solved it before without **jQuery** , now solve again **with** jQuery. If you
 
 
 To submit, push the entire folder (the **jQuery_review** folder **ONLY**) to a github repo and link us to that repo. You code should have console.logs that show up when we open the `index.html` page.
+
+Also, you should **deploy** your repo to **GitHub Pages** so that we can access your **index.html** via the webbrowser on the internets.
