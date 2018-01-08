@@ -1,6 +1,7 @@
-# Homework #2
+# ~~Homework #2~~ CANCELLED
+We will just do this in class.
 
-## DUE: Mon Jan 8th, Midnight
+## ~~DUE: Mon Jan 8th, Midnight~~
 
 ## Assignment: jQuery Practice
 
