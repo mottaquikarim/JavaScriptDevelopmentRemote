@@ -30,7 +30,7 @@ Here are all the lectures for this course. This section will be updated with not
 
 ### [Lecture 9: Events and jQuery](Lecture_9) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=9) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_9/class_notes)
 
-### [Lecture 10: Building UIs](Lecture_10) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=10) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_10/class_notes)  | [Homework #2](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_10/homework)
+### [Lecture 10: Building UIs](Lecture_10) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=10) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_10/class_notes)  | [Homework #2](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_8/homework)
 
 
 
