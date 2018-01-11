@@ -1,0 +1,52 @@
+.title {
+    width: 545px;
+    height: 5px;
+    text-align: center;
+    vertical-align: text-top;
+    line-height: 10px;
+    font-family: 'Work Sans', sans-serif;
+}
+.color-holder {
+    height: 175px;
+    width: 545px;
+    background-color: black;
+    color:white;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 60px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 175px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+.square-holder {
+    width: 550px;
+}
+.square {
+    display: inline-block;
+    margin-right:5px;
+    border-radius: 1.25px;
+    width: 50px;
+    height: 50px;
+}
+.color-name {
+    opacity: 0;
+}
+.color-history {
+    opacity:0;
+}
+.copy-button {
+    padding-left: 3px;
+    padding-right: 3px;    
+    font-family: 'Work Sans', sans-serif;
+}
+.color-number-input {
+    width:75px;
+    margin-bottom: 5px;
+    margin-left: 181px;
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+}
