@@ -10,9 +10,9 @@ Let's improve on our Shopping List. Requirements listed below.
 
 👇
 
--
 
-**Multiple Items**
+
+### Multiple Items
 
 Add support for adding multiple items. 
 
@@ -20,9 +20,8 @@ Add support for adding multiple items.
 * come up with a way for user to easily add 2+ items at a time.
 	* Implementation is up to you, be creative!
 
--
 
-**Validation**
+### Validation
 
 add support for validating the item and price fields.
 
@@ -31,15 +30,13 @@ add support for validating the item and price fields.
 * 
 * **NOTE** must also work for bulk adding case.
 
--
 
-**[Local storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)**
+### [Local storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
 
 Using this browser feature, implement way for shopping list to persist along page refresh.
 
--
 
-**Coupons**
+### Coupons
 
 Devise a method that will allow user to apply a coupon (e.g. 25% off) to the total price of items at any time. 
 
@@ -47,25 +44,22 @@ Devise a method that will allow user to apply a coupon (e.g. 25% off) to the tot
 * User should be able to visually see that a coupon has been applied
 * User should have the ability to remove the coupon discount at any time
 
--
 
-**Max Budget**
+### Max Budget
 
 Allow user to input a **MAX BUDGET**. 
 
 * If total price of items surpasses max budget, each item added afterwards should be visually distinguishable
 * User should have the ability to select various items and visually determine if they fit within budget
 
--
 
-**Challenge**
+### Challenge
 
 * Using the **[myjson](http://myjson.com/)** service, implement storage scenario where the list is accessible on any device. 
 * Note, we do not know how to do authentication yet, so assume there is only one user - you.
 
--
 
-**Challenge 2**
+### Challenge 2
 
 * See if you can use **[this](https://serratus.github.io/quaggaJS/examples/static_images.html)** javascript library to build in a barcode scanner. 
 * If you want, you can use **[this](https://www.barcodelookup.com/)** site to "look up" the code and try to determine the product
