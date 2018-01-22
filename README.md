@@ -39,6 +39,9 @@ Here are all the lectures for this course. This section will be updated with not
 ### [Lecture 12: Building UIs Practice](Lecture_12) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=12) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_12/class_notes)
 
 
+### [Lecture 13: Dynamic Apps](Lecture_13) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=13) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_13/class_notes)
+
+
 
 ## Your Instructional Team
 
