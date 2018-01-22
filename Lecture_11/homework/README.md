@@ -1,6 +1,6 @@
 # [Homework #3](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=11#/4)
 
-## DUE: Weds Jan 24th, Midnight
+## DUE: Weds Jan 29th, Midnight
 
 ## [Assignment: Shopping List UI](https://github.com/FEWDMaterials/ShoppingListUI)
 
