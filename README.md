@@ -36,6 +36,9 @@ Here are all the lectures for this course. This section will be updated with not
 ### [Lecture 11: (FINALLY) Building UIs](Lecture_11) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=11) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_11/class_notes)  | [Homework #3](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_11/homework)
 
 
+### [Lecture 12: Building UIs Practice](Lecture_12) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=12) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_12/class_notes)
+
+
 
 ## Your Instructional Team
 
