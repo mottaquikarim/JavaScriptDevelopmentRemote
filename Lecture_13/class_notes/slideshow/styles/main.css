@@ -1,0 +1,30 @@
+/* CURRENTLY IN: styles/main.css */
+
+
+.slideshow {
+	width: 300px;
+	height: 300px;
+	box-sizing: border-box;
+	margin: 20px auto;
+	display: flex;
+	overflow: hidden;
+}
+
+.slide {
+	width: 300px;
+	height: 300px;
+	/*border: 1px solid white;*/
+	box-sizing: border-box;
+	background-color: black;
+	flex-shrink: 0;
+	transition: margin-left 0.5s linear;
+}
+
+.slideshow-controls {
+	margin: 0 auto;
+	width: 100px;
+}
+
+.slick-slideshow img {
+	width: 100%;
+}
