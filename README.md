@@ -41,6 +41,10 @@ Here are all the lectures for this course. This section will be updated with not
 
 ### [Lecture 13: Dynamic Apps](Lecture_13) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=13) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_13/class_notes)
 
+### [Lecture 14: APIs 1.0](Lecture_14) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=14) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_14/class_notes)
+
+### [Lecture 15: APIs 2.0](Lecture_14) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=15) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_15/class_notes)
+
 
 
 ## Your Instructional Team
