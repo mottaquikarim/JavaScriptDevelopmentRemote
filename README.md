@@ -45,6 +45,8 @@ Here are all the lectures for this course. This section will be updated with not
 
 ### [Lecture 15: APIs 2.0](Lecture_15) | [Slides](https://mottaquikarim.github.io/rehearsal/public/stage.html?source=qgdsd#/) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_15/class_notes)
 
+### [Lecture 16: AsyncJS](Lecture_16) | [Slides](https://mottaquikarim.github.io/rehearsal/public/stage.html?source=1bn8a3#/) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_16/class_notes)
+
 
 
 ## Your Instructional Team
