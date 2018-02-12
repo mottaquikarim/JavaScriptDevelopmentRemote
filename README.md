@@ -47,7 +47,9 @@ Here are all the lectures for this course. This section will be updated with not
 
 ### [Lecture 16: AsyncJS](Lecture_16) | [Slides](https://mottaquikarim.github.io/rehearsal/public/stage.html?source=qend5#/) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_16/class_notes)
 
-### [Lecture 17: CRUD](Lecture_17) | [Slides](https://mottaquikarim.github.io/rehearsal/public/stage.html?source=1bn8a3#//) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_17/class_notes)
+### [Lecture 17: CRUD](Lecture_17) | [Slides](https://mottaquikarim.github.io/rehearsal/public/stage.html?source=1bn8a3#/) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_17/class_notes)
+
+### [Lecture 18: Life After the Browser](Lecture_18) | [Slides](https://mottaquikarim.github.io/rehearsal/public/stage.html?source=8hpul#/) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_18/class_notes)
 
 
 ## Your Instructional Team
