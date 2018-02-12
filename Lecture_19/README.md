@@ -148,4 +148,24 @@ In particular, we will update our **[CRUD app](https://github.com/mottaquikarim/
 
 **NB:** ok to call **[renderComponent multiple times.](https://stackoverflow.com/questions/25728314/pass-updated-data-to-root-component)**
 
+---
+
+## Thanks! 
+
+You guys did a great job 👍
+
+-
+
+## A HUGE thanks to Wesley
+
+![asdfasdf](https://media.giphy.com/media/NnGGHE0muVqpO/giphy.gif)
+
+-
+
+## Keep in touch!
+
+* **[Linkedin](https://www.linkedin.com/in/mottaqui-karim-5b01212a/)**
+* **[Facebook](https://www.facebook.com/taqkarim)**
+* **[IG](https://www.instagram.com/taqqui.karim/)** (🐱 🐱 🐱)
+* **[Medium](https://medium.com/@the_taqquikarim)**
 
