@@ -51,6 +51,9 @@ Here are all the lectures for this course. This section will be updated with not
 
 ### [Lecture 18: Life After the Browser](Lecture_18) | [Slides](https://mottaquikarim.github.io/rehearsal/public/stage.html?source=8hpul#/) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_18/class_notes)
 
+### [Lecture 19:  🙌 Fin  🙌 ](Lecture_19) | [Slides](https://mottaquikarim.github.io/rehearsal/public/stage.html?source=vw1x9#/) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_19/class_notes)
+
+
 
 ## Your Instructional Team
 
