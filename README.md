@@ -3,6 +3,8 @@
 # JavaScript Development
 🎉🎈🎂🍾🎊🍻💃
 
+## 👉 👉  CONTENT FOR: JSR 11/27/2017 👈 👈
+This is a "snapshot" for the remote course that ran on 11/27/2017.
 
 *A hands on and practical introduction
  to programming and javascript development.*
