@@ -14,6 +14,13 @@ This body of text is a living document. It will be updated with course and lectu
 ## Table of Contents
 Here are all the lectures for this course. This section will be updated with notes as we make our way through the curriculum.
 
+### PRIOR ITERATIONS
+
+I have preserved a "snapshot" of prior course iterations as a branch of this repo. This is nice because you can still fork off of this repo, switch to that branch and then do as you please (including cloning it down to your local machine). Please find below the list of snapshots.
+
+1. **[JSR 11/27/2017](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/course-iteration/11-27-2017)**
+
+
 ### [Lecture 2: Data Types](Lecture_2) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=2)
 
 ### [Lecture 3: Conditionals And Loops](Lecture_3) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=3) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_3/class_notes)
