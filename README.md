@@ -7,7 +7,7 @@
  to programming and javascript development.*
  
 ## 👉 👉  CONTENT FOR: JSR 11/27/2017 👈 👈
-This is a "snapshot" for the remote course that ran on 11/27/2017.
+**This is a "snapshot" for the remote course that ran on 11/27/2017.**
  
  JavaScript (js) is one heck of a language. Initially developed over the course of a weekend, it is now one of the most popular programming languages used all over the world. Initially, JavaScript was developed to run in the web browser. Every single website that has ever existed leveraged js to power all dynamic features (colloquially referred to as the “frontend”). In the past decade, the language has been ported over to run server-side (or, colloquially speaking, on the “backend”). This was a turning point for the language since it made js the only language needed to build a fully functional, end to end website. These days, javascript is used to build everything: from website front- and back-ends to desktop apps to even IoT (internet of things) hardware based projects. In this course, we will explore all aspects of this language in our quest to master both programming and in particular, practical web development.
 
