@@ -3,11 +3,11 @@
 # JavaScript Development
 🎉🎈🎂🍾🎊🍻💃
 
-## 👉 👉  CONTENT FOR: JSR 11/27/2017 👈 👈
-This is a "snapshot" for the remote course that ran on 11/27/2017.
-
 *A hands on and practical introduction
  to programming and javascript development.*
+ 
+## 👉 👉  CONTENT FOR: JSR 11/27/2017 👈 👈
+This is a "snapshot" for the remote course that ran on 11/27/2017.
  
  JavaScript (js) is one heck of a language. Initially developed over the course of a weekend, it is now one of the most popular programming languages used all over the world. Initially, JavaScript was developed to run in the web browser. Every single website that has ever existed leveraged js to power all dynamic features (colloquially referred to as the “frontend”). In the past decade, the language has been ported over to run server-side (or, colloquially speaking, on the “backend”). This was a turning point for the language since it made js the only language needed to build a fully functional, end to end website. These days, javascript is used to build everything: from website front- and back-ends to desktop apps to even IoT (internet of things) hardware based projects. In this course, we will explore all aspects of this language in our quest to master both programming and in particular, practical web development.
 
@@ -16,32 +16,32 @@ This body of text is a living document. It will be updated with course and lectu
 ## Table of Contents
 Here are all the lectures for this course. This section will be updated with notes as we make our way through the curriculum.
 
-### [Lecture 2: Data Types](Lecture_2) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=2)
+### [Lecture 2: Data Types](Lecture_2) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=2&branch=course-iteration/11-27-2017)
 
-### [Lecture 3: Conditionals And Loops](Lecture_3) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=3) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_3/class_notes)
+### [Lecture 3: Conditionals And Loops](Lecture_3) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=3&branch=course-iteration/11-27-2017) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_3/class_notes)
 
-### [Lecture 4: Functions and Scope](Lecture_4) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=4) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_4/class_notes)
+### [Lecture 4: Functions and Scope](Lecture_4) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=4&branch=course-iteration/11-27-2017) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_4/class_notes)
 
-### [Lecture 5: Slackbot Lab](Lecture_5) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=5) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_5/class_notes) | [Homework #1](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_5/homework)
+### [Lecture 5: Slackbot Lab](Lecture_5) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=5&branch=course-iteration/11-27-2017) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_5/class_notes) | [Homework #1](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_5/homework)
 
-### [Lecture 6: Functions Cont'd](Lecture_6) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=6) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_6/class_notes)
+### [Lecture 6: Functions Cont'd](Lecture_6) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=6&branch=course-iteration/11-27-2017) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_6/class_notes)
 
-### [Lecture 7: Using Objects](Lecture_7) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=7) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_7/class_notes)
+### [Lecture 7: Using Objects](Lecture_7) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=7&branch=course-iteration/11-27-2017) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_7/class_notes)
 
-### [Lecture 8: Document Object Model](Lecture_8) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=8) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_8/class_notes)  | ~~[Homework #2](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_8/homework)~~
+### [Lecture 8: Document Object Model](Lecture_8) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=8&branch=course-iteration/11-27-2017) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_8/class_notes)  | ~~[Homework #2](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_8/homework)~~
 
-### [Lecture 9: Events and jQuery](Lecture_9) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=9) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_9/class_notes)
+### [Lecture 9: Events and jQuery](Lecture_9) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=9&branch=course-iteration/11-27-2017) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_9/class_notes)
 
-### [Lecture 10: Building UIs](Lecture_10) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=10) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_10/class_notes)  | [Homework #2](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_8/homework)
-
-
-### [Lecture 11: (FINALLY) Building UIs](Lecture_11) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=11) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_11/class_notes)  | [Homework #3](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_11/homework)
+### [Lecture 10: Building UIs](Lecture_10) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=10&branch=course-iteration/11-27-2017) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_10/class_notes)  | [Homework #2](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_8/homework)
 
 
-### [Lecture 12: Building UIs Practice](Lecture_12) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=12) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_12/class_notes)
+### [Lecture 11: (FINALLY) Building UIs](Lecture_11) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=11&branch=course-iteration/11-27-2017) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_11/class_notes)  | [Homework #3](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_11/homework)
 
 
-### [Lecture 13: Dynamic Apps](Lecture_13) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=13) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_13/class_notes)
+### [Lecture 12: Building UIs Practice](Lecture_12) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=12&branch=course-iteration/11-27-2017) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_12/class_notes)
+
+
+### [Lecture 13: Dynamic Apps](Lecture_13) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=13&branch=course-iteration/11-27-2017) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_13/class_notes)
 
 ### [Lecture 14: APIs 1.0](Lecture_14) | [Slides](https://mottaquikarim.github.io/rehearsal/public/stage.html?source=1bn8a3#/) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_14/class_notes)
 
