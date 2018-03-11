@@ -5,7 +5,9 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
+        <!-- TODO: swap the `master` branch label here with dynamic branch value from query params -->
 		<link rel="shortcut icon" type="image/x-icon" href="https://raw.githubusercontent.com/mottaquikarim/JavaScriptDevelopmentRemote/master/assets/ga_ico.ico" />
+
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/css/reveal.min.css">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.6.0/css/theme/white.css">
@@ -50,13 +52,17 @@
 			const fetchLecture = hashdict => {
 				title = document.querySelector('title');
 				const lecture = hashdict['lecture']
+
+                // default to master branch if no `branch` query param is found
+                const branch = hashdict['branch'] || 'master';
+
 				if (!lecture) {
 					title.innerHTML = `✋ Failed To Load`
 					alert('✋ Sorry, the "lecture" query param was not found, slides will not load.')
 					return;	
 				}
 
-				const url = `https://raw.githubusercontent.com/mottaquikarim/JavaScriptDevelopmentRemote/master/Lecture_${lecture}/README.md`
+				const url = `https://raw.githubusercontent.com/mottaquikarim/JavaScriptDevelopmentRemote/${branch}/Lecture_${lecture}/README.md`
 
 				const reveal = document.querySelector('.reveal section')
 				if (!reveal) {
