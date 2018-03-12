@@ -75,3 +75,12 @@ I have preserved a "snapshot" of prior course iterations as a branch of this rep
 <img src="https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/blob/master/assets/wes.jpg?raw=truee" style="width: 100px; height: auto;" width="100" align="left"> 
 
 Wesley is a JavaScript engineer who makes sure the site works beautifully. Prior to working at Honey, Wesley was an implementation engineer at Sailthru, a content personalization and marketing platform. As a graduate of one of General Assembly's early coding bootcamps himself, Wesley also had a brief stint as a TA for their front-end web development course.
+
+## Useful Op Cmds
+
+Some useful one liners for cleaning up content between iterations
+
+### Removing old class notes content but preserving the folder itself and README
+```
+find . -name "*" ! -name "*.md" ! -path '*/class_notes/*.md' ! -path "*.git*" ! -path "*stage*" ! -path "./index.html" ! -path "*assets*" -type f -delete
+```
