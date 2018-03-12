@@ -20,6 +20,7 @@ I have preserved a "snapshot" of prior course iterations as a branch of this rep
 
 1. **[JSR 11/27/2017](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/course-iteration/11-27-2017)**
 
+### [Lecture 1: Hello, Wrold!](Lecture_1) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=1)
 
 ### [Lecture 2: Data Types](Lecture_2) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=2)
 
