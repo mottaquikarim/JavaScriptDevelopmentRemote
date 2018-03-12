@@ -2,7 +2,7 @@
 #  Hello, Wrold!
 ### Taq Karim
 
-*Senior Software Engineer*, ** [Intersection](https://www.intersection.com/)**
+*Senior Software Engineer*, **[Intersection](https://www.intersection.com/)**
 
 ---
 
