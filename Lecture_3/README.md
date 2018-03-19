@@ -1,12 +1,11 @@
-# Lecture 3: Conditionals and Loops
+# Lecture 4: Conditionals and Loops
 
 ### Taq Karim
 Senior Software Engineer, Intersection
 
 ---
 ## Objectives
-* Use `if/else` conditionals for control flow
-* Use Boolean logic to combine and manipulate conditional tests
+* Use `if/else` conditionals + boolean logic to achieve control flow
 * Use `switch/case` conditionals for control flow based on matching explicit values
 * Differentiate between `true`, `false`, truthy, and falsy
 * Review iteration using `for` and `forEach`, and introduce `while` and `do/while` loops
@@ -29,8 +28,12 @@ Conditional statements enable us to decide which blocks of code to execute and w
 
 JavaScript supports two conditional statements: `if/else` and `switch`. We'll start off with `if/else` which uses Boolean, `true` or `false`, tests.
 
----
+-
+
 ## If / Else Statement
+
+-
+
 
 The block of code within the body of the `if` statement, *i.e.* between the `{ }` is run if `expr` evaluates to `true`.
 
@@ -459,8 +462,9 @@ getFinalPrice(10); // 10.8875
 
 ## Eligibility Check Exercise
 
----
-Working in repl.it, write a function that outputs a message based on a user's age. Please **work in groups** of 2-3.
+-
+
+Create a blank webpage, load an **app.js** file and write a function that outputs a message based on a user's age. 
 
 -
 
@@ -472,6 +476,7 @@ The program must **print out only the most recent item** a person can do, *e.g.*
 * 35 or Older: 'You can run for president!'
 * 62 or Older: 'You can collect social security!'
 
+**PS:** by "print out" we mean console.log the returned value of a function invoked
 -
 
 If a user doesn't provide a valid age, tell them to do so. For now, you can hardcode the age to test your code.
@@ -480,7 +485,7 @@ If a user doesn't provide a valid age, tell them to do so. For now, you can hard
 ## Switch Statements
 A switch statement first evaluates the `expr` and then matches the `expr`'s value to a `case` clause. If there's a match, it executes the statements for that case.
 
----
+-
 
 We need to use `break` to stop it from continuing to evaluate statements if there's a match. There's also an optional `default` clause.
 ```
@@ -562,6 +567,7 @@ if (grade === 'A') {
   console.log('Unexpected grade value entered');
 }
 ```
+
 -
 
 ## Solution
@@ -643,7 +649,7 @@ switch (grade) {
 
 Let's review some ways to make loops in JavaScript. We'll use them to evaluate some block of code multiple times.
 
----
+-
 ## While Loop
 We can use the `while` statement to run a code block as long as the condition is `true`. The condition is evaluated **before** executing the block.
 
@@ -657,7 +663,8 @@ while (condition) {
 
 Outside of interviews, I've rarely use a `while` loop. They're useful for rare problems where you're not iterating over an array, or you don't know when to stop outside of the loop.
 
----
+-
+
 ## Infinite and Never-run While Loops
 Remember, the condition is evaluated **before** executing the block.
 ```
@@ -707,7 +714,8 @@ const numArray = Array.from(Array(11).keys()).slice(1)
 Note that this approach, while terse may be considered a bit more confusing. (NB: I'm personally very fond of this technique)
 
 
----
+-
+
 ## Do-While Loop
 The `do...while` runs a block of code until the condition is `false`. The condition is evaluated **after** executing the statement once.
 
@@ -785,7 +793,10 @@ Here's another way to write the above (NB: I strongly prefer this approach
 ^ we call this an `arrow function`, it has subtle differences (I would say advantages) over using the `function` keyword. We will discuss these nuances when appropriate but for now strongly prefer to use arrow functions over function expressions when handling callbacks (ie: functions passed into other functions, like above)
 
 ---
-## Fizz Buzz
-Fizz Buzz is a math game designed to teach the concept of division. Take a few moments to read through the starter code, and then we'll get started.
 
-(It's an infamous problem: https://blog.codinghorror.com/why-cant-programmers-program/ )
+## Practice
+
+* **[Conditionals](http://samantha.fewd.us/#fork/mottaquikarim/FEWD629_functions_pset_3)**
+* **[Conditionals w/UI](http://samantha.fewd.us/#fork/mottaquikarim/Calculate_Grade)**
+* **[Loops](http://samantha.fewd.us/#fork/mottaquikarim/FEWD_629_functions_pset_8)** - NB: there is a **second** tab with additional problems!
+* **[Arrays](http://samantha.fewd.us/#fork/mottaquikarim/FEWD_629_functions_pset_10)**
