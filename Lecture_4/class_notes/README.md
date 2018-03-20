@@ -1,3 +1,7 @@
+# Class notes
+
+[Samantha](http://samantha.fewd.us/#broadcast/mottaquikarim/JSR0312-datatypes-review)
+
 
 const turnOnTheHeat = () => {
     // any valid js code will work here
