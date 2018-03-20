@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+	<body>
+		<script>
+
+			/******************
+			Calculate how old you will be in N years
+
+			This function will tell you your age in N years
+
+			takes in two args, ageNow and numYears
+			should return a number that tells you how old you'll be in numYears
+			if that number is > 100, should return NaN
+			if invalid input given, return -1
+			******************/
+
+			function myAge( ageNow, numYears ) {
+				return ageNow + numYears;
+			}
+
+			const a = myAge(2,3);
+			console.log(a)
+
+
+			/******************
+			Concatenate Strings
+
+			Concatenating string variables
+
+			- Create a function called myConcatenate that takes 3 arguments
+			    * Create an argument called firstStr
+			    * Create a second argument called secondStr
+			    * Create a third argument called thridStr
+			- Concatenate all three arguments in a variable called mySentence
+			    * console out mySentence variable
+			- Call myConcatenate function
+			******************/
+
+			// function myConcatenate( firstStr, secondStr, thirdStr ) {
+			//     return `${firstStr} ${secondStr} ${thirdStr}`;
+			// }
+
+			const myConcatenate = (firstStr = '', secondStr = '', thirdStr = '') => {
+				return `${firstStr} ${secondStr} ${thirdStr}`;
+			}
+
+			const b = myConcatenate('I', 'am', 'iron man');
+			console.log(b)
+
+
+			/******************
+			Subtract Function
+
+			Write a subtract function
+
+			This function will take two numbers and subtract them
+			Ensure that both of the inputs are numbers
+			******************/
+
+			const required = () => {
+				throw new Error('This is required')
+			}
+
+			function subtract(a = required(), b = required()) {
+				return typeof a === "number" && typeof b === "number" && a - b;
+			}
+
+			const subtract2 = (a = required(), b = required()) => {
+				const isAValid = typeof a === "number";
+				const isBValid = typeof b === "number";
+				const diff = a - b;
+
+				return isAValid && isBValid && diff;
+			}
+
+			const c = subtract(1,1)
+			console.log(c)
+
+
+		</script>
+	</body>
+</html>
