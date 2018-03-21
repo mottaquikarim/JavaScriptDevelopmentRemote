@@ -796,7 +796,7 @@ Here's another way to write the above (NB: I strongly prefer this approach
 
 ## Practice
 
-* **[Conditionals](http://samantha.fewd.us/#fork/mottaquikarim/FEWD629_functions_pset_3)**
+* **[Conditionals](http://samantha.fewd.us/#fork/mottaquikarim/FEWD629_functions_pset_3)** **OR** **[Conditionals (HARD MODE)](http://samantha.fewd.us/#fork/mottaquikarim/JSR-PSET_conditionals)**
 * **[Conditionals w/UI](http://samantha.fewd.us/#fork/mottaquikarim/Calculate_Grade)**
 * **[Loops](http://samantha.fewd.us/#fork/mottaquikarim/FEWD_629_functions_pset_8)** - NB: there is a **second** tab with additional problems!
 * **[Arrays](http://samantha.fewd.us/#fork/mottaquikarim/FEWD_629_functions_pset_10)**
