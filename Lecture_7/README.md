@@ -1,4 +1,4 @@
-### Lecture 7
+### Lecture 6
 #  Using Objects
 ### Taq Karim
 
@@ -9,7 +9,6 @@
 ## Objectives
 
 * Use Object literals for solving problems in javascript
-* Grok, create and instantiate our very own javascript **classes**
 
 ---
 
@@ -19,136 +18,44 @@
 1. Warmup
 2. Grokking object basics
 3. Building our own **FormValidator** Utility / **ShoppingList** Utility
-4. ~~Javascript Class~~  👇
-5. ~~Building our own **Alarm** class~~  👇
-
--
 
 
-*Pls note that in an effort to combat information overload, I will defer some topics for today to our subsequent lecture. I have a lot to say about those topics and only 30 mins / 1 hr will not do it any justice*
 ---
-
 ## Warmup
 
-Before we begin, I'd like to discuss a few modifications I made to our code from the other day...
+Before we begin, let's do a quick warmup in pairs...
+
 
 -
 
-What is this code doing?
+Using the `generateRandomNum` function from above, create a function called `rps` that takes in two inputs - player1 choice and player2 choice.
 
 ```js
-const validatePlayerChoice = (player) => {
-	// remove bias for case insensitivity
-	player = player.toLowerCase();
-
-	// remove bias for misspelled choices
-	player = player.substring(0,1);
-
-	if (player !== "r" && player !== "p" && player !== "s") {
-		throw new Error("INVALID INPUT: player " + player)
-	}
-
-	// if we are here, then player is VALID and it is either
-	// "r", "p", "s"
-	return player;
-}
+/*
+	@function rps
+	@param p1 {string}
+	@param p2 {string}
+	@returns {string}
+	@description
+		based on p1 and p2 choice, return either:
+			- 'p1' if player1 is winner
+			- 'p2' if player2 is winner
+			- 'tie' if tie
+*/
 ```
 
 -
 
-### Now consider this:
-
-```js
-const validatePlayerChoice = player => {
-	player = player.toLowerCase().substring(0,1);
-	if (player !== "r" && player !== "p" && player !== "s") {
-		throw new Error("INVALID INPUT: player " + player)
-	}
-	return player;
-}
-```
-^^^ How is the `validatePlayerChoice` function from the slide above different?
-
--
-
-Now consider our actual implementation: what is this code doing?
-
-```js
-const rps = (p1, p2) => {
-	// basic function definition
-	let winner = "Arya Stark";
-
-	p1 = validatePlayerChoice(p1);
-	p2 = validatePlayerChoice(p2);
-
-
-	if (p1 === 'r' && p2 === 'r') {
-		winner = 'tie';
-	}
-	else if (p1 === 'r' && p2 === 'p') {
-		winner = 'p2';
-	}
-	else if (p1 === 'r' && p2 === 's') {
-		winner = 'p1';
-	}
-	else if (p1 === 'p' && p2 === 'r') {
-		winner = 'p1';
-	}
-	else if (p1 === 'p' && p2 === 'p') {
-		winner = 'tie';
-	}
-	else if (p1 === 'p' && p2 === 's') {
-		winner = 'p2';
-	}
-	else if (p1 === 's' && p2 === 'r') {
-		winner = 'p2';
-	}
-	else if (p1 === 's' && p2 === 'p') {
-		winner = 'p1';
-	}
-	else if (p1 === 's' && p2 === 's') {
-		winner = 'tie';
-	}
-
-	return winner;
-}
-```
-
--
-
-Compare and contrast the code below to the one above:
-
-```js
-const rps = (p1) => {
-	p1 = validatePlayerChoice(p1);
-	p2 = validatePlayerChoice(p2);
-
-
-	if (p1 === p2 ) {
-		return 'tie';
-	}
-
-	const p1p2 = p1+p2;
-	if (p1p2 === 'rp' || p1p2 === 'ps' || p1p2 === 'sr') {
-		return 'p2'
-	}
-	else {
-		return 'p1'
-	}
-}
-```
-
--
-
-Finally, consider this:
+Now, consider this:
 
 ```js
 const generateRandomNum = (s,e) => Math.floor(Math.random()*(e-s+1)) + s;
 ```
 
--
+Using this function, write a function called  `rpsAgainstComp` where `p2` is always randomly generated. 
 
-Using the `generateRandomNum` function from above, **refactor** our `rps` function to **generate** player 2's choice. Work in pairs, 10 mins.
+(**HINT/CHALLENGE**: this can be achieved with 1 line of code)
+
 
 ---
 
@@ -559,8 +466,5 @@ Write another factory function that returns an object with the following propert
  
 Use this function to populate the **TodoList**
 
--
-
-### Third, alternative hint
-
-Write a second factory function that runs the first factory function inside of it and then **extends** the returned object before returning...
+---
+## [Homework](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Homework_1)
