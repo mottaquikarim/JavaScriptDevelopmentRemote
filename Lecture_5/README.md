@@ -381,3 +381,6 @@ Implement the `reduce` function:
 
 * **[Loops](http://samantha.fewd.us/#fork/mottaquikarim/FEWD_629_functions_pset_8)** - NB: there is a **second** tab with additional problems!
 * **[Arrays](http://samantha.fewd.us/#fork/mottaquikarim/FEWD_629_functions_pset_10)**
+
+---
+## [Homework](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Homework_1)
