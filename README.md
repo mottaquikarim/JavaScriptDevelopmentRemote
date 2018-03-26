@@ -31,11 +31,11 @@ I have preserved a "snapshot" of prior course iterations as a branch of this rep
 
 ### [Lecture 4: Conditionals And Loops](Lecture_3) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=3) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_3/class_notes)
 
+### [Lecture 5: Loops](Lecture_5) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=5) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_5/class_notes)
+
+### [Lecture 6: Using Objects](Lecture_6) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=6) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_6/class_notes)
+
 ✅✅✅✅
-
-### [Lecture 5: Slackbot Lab](Lecture_5) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=5) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_5/class_notes) | [Homework #1](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_5/homework)
-
-### [Lecture 6: Functions Cont'd](Lecture_6) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=6) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_6/class_notes)
 
 ### [Lecture 7: Using Objects](Lecture_7) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=7) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_7/class_notes)
 
