@@ -33,7 +33,7 @@ I have preserved a "snapshot" of prior course iterations as a branch of this rep
 
 ### [Lecture 5: Loops](Lecture_5) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=5) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_5/class_notes)
 
-### [Lecture 6: Using Objects](Lecture_6) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=6) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_6/class_notes)
+### [Lecture 6: Loops (continuted)](Lecture_6) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=6) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_6/class_notes)
 
 ✅✅✅✅
 
