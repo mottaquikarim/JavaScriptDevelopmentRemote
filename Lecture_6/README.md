@@ -1,4 +1,4 @@
-# Lecture 5: Loops
+# Lecture 6: Loops (continued)
 
 ### Taq Karim
 Senior Software Engineer, Intersection
