@@ -1,470 +1,273 @@
-### Lecture 6
-#  Using Objects
+# Lecture 7: Loops part 3
+
 ### Taq Karim
-
-*Senior Software Engineer*, ** [Intersection](https://www.intersection.com/)**
+Senior Software Engineer, Intersection
 
 ---
-
 ## Objectives
-
-* Use Object literals for solving problems in javascript
+* Review how callbacks are written in JS
+* Understand how the `reduce` method works
+* Briefly dive into recursion
 
 ---
-
-
 ## Agenda
+* Simple loops review
+* Review Callbacks
+* Practice Callbacks
+* Reduce
+* Practice Reduce
+* Recursion
 
-1. Warmup
-2. Grokking object basics
-3. Building our own **FormValidator** Utility / **ShoppingList** Utility
+---
+## Simple loops review
+
+Let's begin by refreshing our memories of how normal, good old looping works.
+
+**[Solve Problems 1-6 in this PSET](http://samantha.fewd.us/#fork/mottaquikarim/JSR-PSET_ArrayMethods)**
 
 
 ---
-## Warmup
+## Review Callbacks
 
-Before we begin, let's do a quick warmup in pairs...
-
+Let's review callbacks, how they are written, and how they are used.
 
 -
 
-Using the `generateRandomNum` function from above, create a function called `rps` that takes in two inputs - player1 choice and player2 choice.
+### Callbacks: how do they work?!
 
-```js
-/*
-	@function rps
-	@param p1 {string}
-	@param p2 {string}
-	@returns {string}
-	@description
-		based on p1 and p2 choice, return either:
-			- 'p1' if player1 is winner
-			- 'p2' if player2 is winner
-			- 'tie' if tie
-*/
+A callback is a function that is passed in as an argument to another function. 
+
+The callback is **called** by the function we pass it into, **not** by us (the programmer)
+
+-
+
+The toughest part of callbacks are to realize that we are **defining** our callback params / return statement to the specs **required** by the function we are passing it in to.
+
+-
+
+Let's consider an example:
+
+```
+[1,2,3].forEach((current, index, origAr) => {
+	// ...
+});
 ```
 
+In this example, **`forEach`** takes exactly **one** argument, the callback.
+
+The callback function expects **three** parameters - why? Because the **`forEach`** function, when it **invokes** the callback we have defined, will pass it **three** parameters.
+
 -
 
-Now, consider this:
+So how do we know what to pass in to the callback function as parameters?
 
-```js
-const generateRandomNum = (s,e) => Math.floor(Math.random()*(e-s+1)) + s;
+-
+
+We don't. We rely on the documentation of **`forEach`** to specify what params we can work with in the callback.
+
+-
+
+Essentially, what this means is in the implementation of the **`forEach`** function from above, there must be something like...
+
 ```
-
-Using this function, write a function called  `rpsAgainstComp` where `p2` is always randomly generated. 
-
-(**HINT/CHALLENGE**: this can be achieved with 1 line of code)
-
-
----
-
-## Object Basics
-
-Let's discuss the mechanics of how objects are created and used. Then, let's use them to build something useful.
-
--
-
-### Creating Objects
-
-```js
-// empty object literal
-const myObj = {};
-
-// object with prefilled values
-const myObj2 = {
-    "property1": "value1",  // notice the colon!
-    "property2": 2, // notice the comma!
-}
-
-// updating an object after the fact
-myObj2["property3"] = true;
-```
-
--
-
-Objects are just another type of valid javascript datatype. Question:
-
-```js
-//  what do you expect to see?
-console.log(typeof myObj2); 
-
- // what do you expect to see?
-console.log(typeof myObj2["property1"]);
-
-// how about now?
-console.log(typeof myObj2["thisPropertyDoesntExistTho"]);
-```
-
--
-
-A note about syntax:
-
-```js
-myObj2.foobar = 'baz';
-
-const myObj3 = {
-    test: 1,
-}
-
-console.log(myObj3.test)
-```
-
-Sometimes you will see object properties being referenced and defined in the manner above. 
-
-👇👇👇
-
--
-
-Generally, this is usually **ok** however if you want to store an object property that has invalid javascript characters such as spaces or dashes you **must** use the approached defined initially.
-
--
-
-### Dynamically setting / retrieving values
-
-Consider the following:
-
-```js
-const o = {
-	"test": 1,
-}
-
-const key = "test";
-console.log(o[key]); //  what should this give us?
-```
-
-```js
-const key = "foo";
-const o = {
-	[key]: 'val',
-}
-console.log(o); // what key is stored in o?
-```
-
-Keep this technique in mind, it will come in handy when we write more complex code.
-
--
-
-### Methods
-
-Object properties that are type `function` are called **`methods`**. (Just a fancy word for a function that is the property of an object). 
-
-👇👇👇
-
--
-
-Here's how we can get/set methods
-
-```js
-const human = {
-    'name': 'Taq Karim',
-    'speak': catchphrase => {
-		    return "Hi, my name is " + 
-				human.name + 
-				'. ' + 
-				catchphrase;
-		}
-}
-
-console.log(human.speak('BOOM. We chillin')); 
-```
-
--
-
-### Example of object usecase
-
-Consider our **`validatePlayerChoice`** function...
-
-(reproduced here for convenience)
-
-```js
-const validatePlayerChoice = (player) => {
-	// remove bias for case insensitivity
-	player = player.toLowerCase();
-
-	// remove bias for misspelled choices
-	player = player.substring(0,1);
-
-	if (player !== "r" && player !== "p" && player !== "s") {
-		throw new Error("INVALID INPUT: player " + player)
+const forEach = (arr, cb) => {
+	for (let i = 0; i < arr.length; i++) {
+		cb(arr[i], i, arr); 
+		/*
+			^^^ this corresponds to our three params: 
+			current, index, origAr		
+		*/
 	}
-
-	// if we are here, then player is VALID and it is either
-	// "r", "p", "s"
-	return player;
 }
 ```
 
+---
+
+## Practice Callbacks
+
+Let's begin by refreshing our memories of how normal, good old looping works.
+
+**[Solve Problems 11-15 in this PSET](http://samantha.fewd.us/#fork/mottaquikarim/JSR-PSET_ArrayMethods)**
+
+**HARD MODE** 
+
+Solve these problems using map or filter, where applicable
+
+---
+
+## Reduce
+
+Or, how I stopped worry and love the loop
+
 -
 
-Suppose we created an object as follows:
+Reduce is the mother of javascript array looping methods. It is a generalized function that lets you **transform** a javascript array into literally any other datatype.
 
-```js
-const validPlayerChoices = {
-	'r': true,
-	'p': true,
-	's': true,
-}
+-
+
+Every array properly we have looked at today can be written in terms of reduce/
+
+-
+
+### How It works
+
+Let's begin with some code. Suppose I intend to find the average of some numbers in an array. Let's solve this the known way first
+
+-
+
 ```
-
-How could we use this object to make our player validation logic easier?
-
-👇👇👇
-
--
-
-```js
-const validPlayerChoices = {'r': true, 'p': true, 's': true,}
-
-const validatePlayerChoice = (player) => {
-	// remove bias for case insensitivity
-	player = player.toLowerCase();
-	// remove bias for misspelled choices
-	player = player.substring(0,1);
-	if (typeof validPlayerChoices[player] === "undefined") {
-		throw new Error("INVALID INPUT: player " + player)
+const mean = arr => {
+	let sum = 0;
+	for (let i = 0; i < arr.length; i++) {
+		sum += arr[i];
 	}
-	// if we are here, then player is VALID and it is either
-	// "r", "p", "s"
-	return player;
+	return sum/arr.length;
 }
+
+mean([1,2,3,4,5]); // 3.6
+
 ```
 
-What are some benefits to this approach?
+Straight forward - add up all the numbers then divide by length. Now with reduce...
+
+-
+
+```
+const mean = arr => {
+  return arr.reduce((sum, curr) => {
+		return sum + curr;
+	}, 0) / arr.length;
+}
+
+mean([1,2,3,4,5]); // 3.6
+
+```
+
+So what's going on in here...?
+
+-
+
+* `reduce` takes two arguments, a callback and an **initial value**, in this case 0
+* the initial value is set equal to what we call the **accumulator**
+* at each iteration of the loop, we perform some logic and **must** return something (a datatype)
+* this datatype is **set to be the new value** of the **accumulator**
+
+In the case of our function above, the accumulator is the running sum and we update it's value at each iteration
+
+-
+
+The callback takes four params:
+
+```
+(accumulator, current, index, origArr) => {...}
+```
+
+We can pass in current value of **accumulator** and transform it how we see fit. 
+
+**Remember the accumulator is only updated by the return statement**.
+
+And that's it!
+
+-
+
+Here is the same implementation again, but more terse:
+
+```
+const mean = arr => arr.reduce((sum, curr) => sum + curr, 0) / arr.length;
+mean([1,2,3,4,5]); // 3.6
+```
+
+* Initially, **sum** is 0. And **curr** is 1. We return **sum + curr**, or 1. 
+* Now, **sum** is 1. And **curr** is 2. We return **sum + curr**, or 3.
+* ...
+* Once we have exhausted **arr**, we should be left with sum of all values, or 18.
+
+-
+
+Implement **`Array.reduce()`**. Something like this:
+```
+reduce([1,2,3,4,5], (sum, curr) => {
+	return sum+curr;
+}, 0);
+```
+
+So it takes three arguments:
+
+1. The array to reduce
+2. the callback function
+3. the initial value
 
 ---
 
-## Practice
+##  Practice Reduce
 
--
+Remember these dudes? Solve them again, but each one must now be solved with **`reduce()`**
 
-### PSET
+* **OPTION1**: **[Solve Problems 1-6 in this PSET](http://samantha.fewd.us/#fork/mottaquikarim/JSR-PSET_ArrayMethods)**
 
-In **[Samantha](http://samantha.fewd.us/#fork/mottaquikarim/FEWD_629_functions_pset_9)**, implement the first two functions:
+* **OPTION2**: Implement **map()** and **filter()** with **reduce()**. Then, **[Solve Problems 11-15 in this PSET](http://samantha.fewd.us/#fork/mottaquikarim/JSR-PSET_ArrayMethods)**
 
-* **getSuperHero**
-* **updateSuperHero**
+If you think we have a good handle on **reduce**, consider **OPTION2**. Else, consider **OPTION1**. We will go over both.
 
-Work in groups of 2, 10 minutes
-
--
-
-### RPS Revisited
-
-Here is yet another implementation of our **`rps`** function:
-
-```js
-const validPlayerChoices = {'r': true, 'p': true, 's': true,}
-const validatePlayerChoice = player => {
-	player = player.toLowerCase().substring(0,1);
-	if (!validPlayerChoices[player]) {
-		throw new Error("INVALID INPUT: player " + player)
-	}
-	return player;
-}
-const rps = (p1, p2) => {
-	p1 = validatePlayerChoice(p1);
-	p2 = validatePlayerChoice(p2);
-	const p2Cases = {'rp': true, 'ps': true, 'sr': true,}
-	if (p1 === p2) return "tie"
-	else if (p2Cases[p1+p2]) return "p2"
-	else return "p1"
-}
-```
-
-👇👇👇
-
--
-
-Using the implementation above...
-
-* Define an object called **`p1Outcomes`**
-* Define an object called **`p2Outcomes`**
-* Each object should have two properties: 
-	* `wins`, 
-	* `losses`
-* Run the `rps` function and use the output to populate the properties of both your objects
-
-Work in groups of 2, 10 minutes
-
--
-
-Now, write **ONE** function that will take any object that looks like `p1Outcomes` or `p2Outcomes` and updates the `wins` / `losses` properties
-
-ie:
-```js
-const p1Outcomes = {"wins": 0, "losses": 0};
-console.log(updateOutcomes(p1Outcomes, 1, 1));
-// expect: {
-//    wins: 1,
-//    losses: 1,
-// }
-```
-
--
-
-Now, write **ANOTHER** function that takes `p1Outcomes` or `p2Outcomes` and returns three values:
-
-1. The **total** games played
-2. The **percentage** of games won
-3. The **percentage** of games lost
-
-How can one function return three values tho...?!
-
--
-
-Finally, run the **`rps`** function 1000 times. 
-
-1. At each iteration, update `p1Outcomes` and `p2Outcomes` with the **win/loss** results
-2. Once your loop is completed, display the **total** number of games played and percentage of games won/lost by player1 and player2.
-
-👇👇👇
-
--
-
-To succeed in the problem above, you might need this:
-
-```js
-const generateRandomNum = (s,e) => Math.floor(Math.random()*(e-s)) + s
-const getRandomPlayerChoice = () => {
-  const options = ['r', 'p', 's'];
-  return options[generateRandomNum(0,options.length+1)]
-}
-```
-
-**PS**: there is an intentional bug in the code above! Find it and fix it before using! (Mainly to force you to grok what is going on here...)
-
-👇👇👇
-
--
-
-**#STRETCHGOALZ**: turn your implementation above into a function where you pass in the number of iterations instead of hardcoding to 1000...
 
 ---
 
-## Shopping List Implementation
+## Recursion
 
-... with objects!
-
-Let's consider what happens if we tried to build programs with object literals.
-
-👇👇👇
+**Definition**: the repeated application of a recursive procedure or definition.
 
 -
 
-### Create a variable called list
-
-It should be an array.
+Anything that can be achieved iteratively can be achieved recursively. Let's look at an example of a recursive implementation of a simple loop...
 
 -
 
-### Write a function called `addToList`.
-
-```js
-addToList([], 'mangoes');
-// ['mangoes']
+Recursively loop
+```
+const recursiveFor = (arr) => {
+	// all recursive functions need a **base case**
+	// this tells the loop when to stop
+	if (arr.length === 0) return; 
+	
+	// here is the "meat" of the function - let's do
+	// whatever it is that we need to do
+	console.log(arr[0]);
+	
+	// finally, go to the next iteration. Since we have a base case
+	// we can rest assured that it will stop once array is exhausted
+	recursiveFor(arr.slice(1));
+}
 ```
 
-(5 mins)
+-
+
+Thinking recursively can be tough - best thing to do is to try and break down the problem to individual repeating components, then code those components and wrap around a base case.
 
 -
 
-### Write a function called `displayList`.
+**Usecases**
 
-```js
-displayList([]);
-// ['mangoes']
+Usually, it may feel simpler/easier to simply apply iteration. And typically this is true.
+
+However, recursion can be helpful for problems where iteration becomes complex. Moreover, there are some cases - like **tree** traversal problems, where recursive solutions are simpler and easier to grok. (We will not be covering trees in this course).
+
+-
+
+Let's solve a famous recursive problem together - fibonacci sequence
+
+```
+const recurseFib = n => {
+	if (n === 0) return 0;
+	if (n < 3) return 1;
+	
+	return recurseFib(n-1) + recurseFib(n-2);
+}
 ```
 
-(5 mins)
+How does this work? Let's do a deep dive.
 
 -
 
-### Write a function called `removeFromList`.
+For practice, let's solve a few recursive problems together.
 
-```js
-removeFromList(['mangoes'], 0);
-// []
-removeFromList(['mangoes'], 10);
-// ERROR: list is too short
-removeFromList([], 0)
-// ERROR: list is empty
-removeFromList([])
-// ERROR: need index
-```
-(5 mins)
-
--
-
-### Write a function called `addMultipleToList`
-
-```js
-addMultipleToList(['mangoes'], ['coffee', 'bread', 'ice cream']);
-// ['mangoes', 'coffee', 'bread', 'ice cream']
-```
-
-* it should use the **`addToList`** function internally.
-
-(5 mins)
-
--
-
-### How can we incorporate this into an object?
-
-(Suggestions welcome)
-
--
-
-### *WHY* should we incorporate this into an object?
-
--
-
-### Reasons...
-
-* removes need for a standalone `list` variable
-* removes need to pass in that list variable into the function every time
-* potentially removes the need to have to `return` that list from function every time
-* logical grouping of methods under a common "namespace"
-
--
-
-### Refactor those functions we wrote above to be a part of **ONE** object.
-
-What if we wanted more than one shopping list tho...?
-
--
-
-### Write function that returns a shopping list object.
-
-We call this a **factory function**.
-
--
-
-### Write a **TodoList** object with the same functionality as the shopping list.
-
-Added caveat:  each item in the list should be an object with the following properties:
-
-* `item`: <**string**>
-* `due`: <**number**>
-* `isCompleted`: <**boolean**>
-
--
-
-### HINT
-
-If we wrote our factory function generically enough, we shouldn't have to do much work!
-
--
-
-### Second Hint
-
-Write another factory function that returns an object with the following properties:
-
-* `item`: <**string**>
-* `due`: <**number**>
-* `isCompleted`: <**boolean**>
- 
-Use this function to populate the **TodoList**
-
----
-## [Homework](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Homework_1)
+**[Recursion PSET](http://samantha.fewd.us/#fork/mottaquikarim/JSR-PSET_Recursion)**
