@@ -35,11 +35,11 @@ I have preserved a "snapshot" of prior course iterations as a branch of this rep
 
 ### [Lecture 6: Loops (continuted)](Lecture_6) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=6) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_6/class_notes)
 
-✅✅✅✅
-
 ### [Lecture 7: Using Objects](Lecture_7) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=7) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_7/class_notes)
 
-### [Lecture 8: Document Object Model](Lecture_8) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=8) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_8/class_notes)  | ~~[Homework #2](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_8/homework)~~
+### [Lecture 8: Document Object Model](Lecture_8) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=8) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_8/class_notes)  | ~~[Homework #2](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_8/homework)
+
+✅✅✅✅
 
 ### [Lecture 9: Events and jQuery](Lecture_9) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=9) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_9/class_notes)
 
