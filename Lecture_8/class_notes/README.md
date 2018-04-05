@@ -1,6 +1,5 @@
 # Class Notes
 
 
-in the `js` folder there are javascript files for `selectorsReview.js` and the `capitalizeEachWord` function
+Samantha workspace to fork and play around with: **[Workspace](http://samantha.fewd.us/#fork/mottaquikarim/JSR_04042018)**
 
-To run, open up index.html and inspect the console. (NOTE: the `capitalizeEachWord` output will not display - can you guess track down why?)
