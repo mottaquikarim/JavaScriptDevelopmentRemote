@@ -1,0 +1,7 @@
+#mocha-stats {
+	position: static;
+}
+#mocha-stats .progress {
+	height: 40px;
+    background: none;
+}
