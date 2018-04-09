@@ -37,13 +37,13 @@ I have preserved a "snapshot" of prior course iterations as a branch of this rep
 
 ### [Lecture 7: Loops Part 3](Lecture_7) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=7) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_7/class_notes)
 
-### [Lecture 8: Using Objects](Lecture_8) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=8) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_8/class_notes)
+### ~~[Lecture 8: Using Objects](Lecture_8) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=8)~~ [Lecture 8: Loops Part 3 (cont'd)](Lecture_7) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=7) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_8/class_notes)
+
+### [Lecture 9: Using Object Literals](Lecture_9) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=9) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_9/class_notes)
+
+### [Lecture 10: Document Object Model](Lecture_10) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=10) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_10/class_notes)
 
 ✅✅✅✅
-
-### [Lecture 9: Events and jQuery](Lecture_9) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=9) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_9/class_notes)
-
-### [Lecture 10: Building UIs](Lecture_10) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=10) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_10/class_notes)  | [Homework #2](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_8/homework)
 
 
 ### [Lecture 11: (FINALLY) Building UIs](Lecture_11) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=11) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_11/class_notes)  | [Homework #3](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_11/homework)
