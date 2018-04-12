@@ -1,5 +1,5 @@
 # Homework 2
-**DUE** Monday April 19nd, Midnight
+**DUE** Weds Apr 21nd, Midnight
 
 ## Factory Function
 Implement the **[JSR ShoppingList Functions](https://github.com/FEWDMaterials/JSR_Shopping_List_Functions/tree/solutions/JSR0312)** as a factory function. 
