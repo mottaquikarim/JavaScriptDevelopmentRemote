@@ -21,7 +21,6 @@ I have preserved a "snapshot" of prior course iterations as a branch of this rep
 1. **[JSR 11/27/2017](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/course-iteration/11-27-2017)**
 
 ### 👉 👉 [Homework 2](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Homework_2) 👈 👈
-### [Homework 1](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Homework_1)
 
 ### [Lecture 1: Hello, Wrold!](Lecture_1) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=1) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_1/class_notes)
 
@@ -44,14 +43,11 @@ I have preserved a "snapshot" of prior course iterations as a branch of this rep
 
 ### [Lecture 10: Document Object Model](Lecture_10) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=10) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_10/class_notes)
 
+### [Lecture 11: Events and jQuery](Lecture_11) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=11) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_11/class_notes)  | [Homework #3](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_11/homework)
+
+### [Lecture 12: jQuery Plugins](Lecture_12) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=12) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_12/class_notes)
+
 ✅✅✅✅
-
-
-### [Lecture 11: (FINALLY) Building UIs](Lecture_11) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=11) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_11/class_notes)  | [Homework #3](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_11/homework)
-
-
-### [Lecture 12: Building UIs Practice](Lecture_12) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=12) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_12/class_notes)
-
 
 ### [Lecture 13: Dynamic Apps](Lecture_13) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=13) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_13/class_notes)
 
@@ -67,6 +63,11 @@ I have preserved a "snapshot" of prior course iterations as a branch of this rep
 
 ### [Lecture 19:  🙌 Fin  🙌 ](Lecture_19) | [Slides](https://mottaquikarim.github.io/rehearsal/public/stage.html?source=vw1x9#/) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_19/class_notes)
 
+## HWK and Final Project Info
+
+### [Final Project](https://slack-files.com/T9LNVSB7Z-F9P06GZCN-d506c190a0)
+
+### [Homework 1](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Homework_1)
 
 
 ## Your Instructional Team
