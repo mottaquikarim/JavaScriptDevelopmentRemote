@@ -43,7 +43,7 @@ I have preserved a "snapshot" of prior course iterations as a branch of this rep
 
 ### [Lecture 10: Document Object Model](Lecture_10) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=10) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_10/class_notes)
 
-### [Lecture 11: Events and jQuery](Lecture_11) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=11) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_11/class_notes)  | [Homework #3](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_11/homework)
+### [Lecture 11: Events and jQuery](Lecture_11) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=11) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_11/class_notes)
 
 ### [Lecture 12: jQuery Plugins](Lecture_12) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=12) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_12/class_notes)
 
