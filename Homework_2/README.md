@@ -9,3 +9,5 @@ Implement the **[JSR ShoppingList Functions](https://github.com/FEWDMaterials/JS
 ## UI
 Using the factory function definition from above, build a UI for our functionality.
 **[Details Here](https://github.com/FEWDMaterials/ShoppingListUI)**
+
+**NOTE**: Expectation is to complete the first two "pass" requirements. Everything else is encouraged but optional.
