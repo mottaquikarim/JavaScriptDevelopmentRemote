@@ -47,11 +47,11 @@ I have preserved a "snapshot" of prior course iterations as a branch of this rep
 
 ### [Lecture 12: jQuery Plugins](Lecture_12) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=12) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_12/class_notes)
 
+### [Lecture 13: Events, Examples, Practice](Lecture_13) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=13) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_13/class_notes)
+
+### [Lecture 14: jQuery Plugins / Dynamic Apps](Lecture_14) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=14) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_14/class_notes)
+
 ✅✅✅✅
-
-### [Lecture 13: Dynamic Apps](Lecture_13) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=13) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_13/class_notes)
-
-### [Lecture 14: APIs 1.0](Lecture_14) | [Slides](https://mottaquikarim.github.io/rehearsal/public/stage.html?source=1bn8a3#/) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_14/class_notes)
 
 ### [Lecture 15: APIs 2.0](Lecture_15) | [Slides](https://mottaquikarim.github.io/rehearsal/public/stage.html?source=qgdsd#/) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_15/class_notes)
 
