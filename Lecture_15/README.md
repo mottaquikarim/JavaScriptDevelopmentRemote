@@ -1,5 +1,5 @@
 ### Lecture 15
-#  APIs 2.0
+# Dynamic Apps / Asynchronous JavaScript
 ### Taq Karim
 
 *Senior Software Engineer*, ** [Intersection](https://www.intersection.com/)**
@@ -8,261 +8,227 @@
 
 ## Objectives
 
-* Understand how the **`Promise`**  object works
-* Build dynamic apps that synthesize multiple API based data sources
+* Consider how dynamic (ie: data rich) apps are structured and built
+* Understand basics of asynch javascript
+
 ---
 
 
 ## Agenda
 
-1. Promises
-2. Building a Gif powered weather app
-3. Using the **[myjson api](http://myjson.com/api)**
+* Warm up
+* Dyanmic Apps
+* Exercise 1
+* Exercise 2
 
 ---
 
-## Promises
+## Warm up
 
-Promises are special javascript objects that allow us to handle asynchronous programming.
+![woohoo](https://media3.giphy.com/media/31lPv5L3aIvTi/giphy.gif)
+
+👇👇👇
+
+-
+
+### Giphy Search Engine
+
+Here are the main features we would like to accomplish in our UI.
 
 👇
 
 -
 
-### Asynch programming
+### Set up
 
-Suppose you wanted to display to the user **1!**, **2!**, **3!**, but you wanted to have a timeout between each display. How could we achieve this?
-
--
-
-One approach could be this:
-
-```
-console.log('1!');
-setTimeout(() => {
-	console.log('2!');
-	setTimeout(() => {
-		console.log('3!');
-	}, 500);
-}, 500);
-```
-
-Gross! 🤢🤢🤢
-
--
-
-This is essentially the prime usecase for promises. Let's see how we could rewrite the code above with promises:
-
-```
-const displayNum = (num=1, timeout=0) => {
-	return new Promise((resolve, reject) => {
-		setTimeout(() => {
-			console.log(`${num}!`);
-			resolve(num);
-		}, timeout);
-	})
-}
-
-displayNum()
-	.then((num) => {
-		return displayNum(num+1, 500);
-	})
-	.then((num) => {
-		return displayNum(num+1, 500);
-	});
-```
+Please clone **[this](https://github.com/FEWDMaterials/boilerplate-plain)** github repo.
 
 👇
 
 -
 
-Ok, let's recap - what just happened??
+### First Pass
 
-Think of a promise as a function that issues a **delayed** return. You can choose how much to delay this return which is particularly useful when performing AJAX operations. 
-
-
--
-
-
-We don't know how long it will take for an API request to come back, so we can use a Promise to basically say that **when** the response comes back, **then** we will go on to the next step of our program. 
-
-Now, let's dive into the mechanics of how Promises work
+* Input field for querying Giphy API
+* On button click **or** enter key press, trigger a function call that starts timer (stubbing API call for now)
+* When timer runs out, display something on the screen
 
 -
 
-```
-const myPromise = new Promise((resolve, reject) => {
-	// do something asycnh here
-	// ...
-	// if it completes successfully, call:
-	resolve(5)
-})
-```
+How do we actually *query* GIPHY tho? In order to achieve this functionality, we will need to learn about **Web APIs** and **AJAX**.
 
-* The **resolve** function tells the Promise object that the asynch operation is complete. 
-* We can pass along **one** argument to the **resolve** function which is essentially whatever we would like to **return** from this asynch operation.
-
--
-
-Here's how we can handle a successful promise
-```
-const myPromise = new Promise((resolve, reject) => {
-    // do something asycnh here
-    // ...
-    // if it completes successfully, call:
-    resolve(5)
-});
-
-myPromise.then((number) => {
-	console.log(number);
-});
-```
-
-In this case `number` will be `5` since that's what we **resolved** our promise with
-
--
-
-Also, we can continue the **Promise** chain by doing the following:
-
-```
-const myPromise = new Promise((resolve, reject) => {
-    // do something asycnh here
-    // ...
-    // if it completes successfully, call:
-    resolve(5)
-});
-
-myPromise
-	.then((number) => {
-		console.log(number);
-		return "hello!"
-	})
-	.then((str) => {
-		console.log(str)
-	});
-```
-👇👇👇
-
--
-
-Essentially, a **`return`** statement in a **then** function will **always** return a new promise. This makes it very easy to chain multiple asynch actions together!
-
--
-
-
-```
-const myPromise = new Promise((resolve, reject) => {
-	// do something asycnh here
-	// ...
-	// if it FAILS, call:
-	reject(5)
-})
-```
-* The **reject** function tells the Promise object that the asynch operation has failed (ie: network error, something went wrong on API side, etc)
-* We can pass along an error message to the **reject** function informing code below that a failure occurred
-
--
-
-Here's how we can handle a failed promise
-```
-const myPromise = new Promise((resolve, reject) => {
-	// do something asycnh here
-	// ...
-	// if it FAILS, call:
-	reject(5)
-})
-
-myPromise.catch(e => {
-	console.log(e); // something failed!
-});
-```
-
--
-
-If **any** promise in a chained promise fails, we skip over to the **`catch`** function. In general it is good practice to have a `catch` at the end of a promise chain.
-
-
-👇👇👇
-
--
-
-```
-const rollDie = () => new Promise((resolve, reject) => {
-	setTimeout(() => {
-		const n = Math.floor(Math.random()*10)+1;
-		if (n > 6) {
-			reject('Greater than 6')
-		}
-		else resolve(n)
-	}, 500);
-});
-
-rollDie()
-	.then(dieRoll => console.log(dieRoll))
-	.catch(e => console.log(e))
-```
-
-In this example, we try to roll an unfair die and if our roll is greater than expected we **catch** the error and log it, else we display the die value
-
--
-
-Multiple, separate promises
-
-* What if we wanted to roll **three** die and then based on the result evaluate them...?
-
-👇👇👇
-
--
-
-Let's define the die roll a bit more simply...
-```
-const rollDie = () => new Promise((resolve, reject) => {
-	const timeout = Math.floor(Math.random()*1000)
-	setTimeout(() => resolve(Math.floor(Math.random()*10)+1), timeout);
-});
-```
-👇👇👇
-
--
-
-Then, let's implement the rolls themselves
-
-```
-const r1 = rollDie();
-const r2 = rollDie();
-const r3 = rollDie();
-
-Promise.all([r1, r2, r3]).then((values) => {
-	console.log(values); // expect: [1,2,3]
-})
-```
-Much simpler!
-
--
-
-Now suppose we wanted to **ensure** roll1 happened **before** roll2, etc
-
-```
-const r1 = rollDie();
-const r2 = r1.then(() => rollDie());
-const r3 = r2.then(() => rollDie());
-
-Promise.all([r1, r2, r3]).then((values) => {
-	console.log(values); // expect: [1,2,3]
-})
-```
-This will ensure r1 happens **first**, **then** r2, **then** r3. We can still collect all the output using **Promise.all**.
-
--
-
-**Challenge**: This is the docs for **[XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)**.
-
-Convert this into a **Promise**-_ified_ function, **ajaxPromise**
 
 ---
 
+## Dynamic Apps
 
-## Gif Weather App
+By **Dynamic App** we mean an app that reaches out to a data provider (ie: giphy, facebook, twitter, etc) to fetch up to data information for display / interactivity.
+
+-
+
+We are able to achieve this functionality thanks to two technologies:
+
+* Web APIs
+* AJAX
+
+-
+
+### Web APIs
+
+A Web API is a list of web urls that third party developers can invoke to perform tasks on data. Really, these urls are mapping directly to functions defined in the data source's code base.
+
+Invoking the URL will call the underlying functions provided that the URL invocation is valid.
+
+-
+
+Typically, data sources will require users to register as a "developer" and sign up for minimally an **API key** that can be used loosely as an identifier for the developer. 
+
+-
+
+This allows the data source to monitor usage and optionally, **rate limit** or block invocations if abuse is detected.
+
+Therefore, the first step towards integrating with a web API is to **sign up for an API key**. Not all services require this but **most** usually do.
+
+-
+
+The web URLs themselves pertain to one of four actions:
+
+* Create
+* Read
+* Update
+* Delete
+
+or, **CRUD** for short.
+
+-
+
+### `CRUD` and HTTP Verbs
+
+Even though we haven't explicitly used the term `CRUD` before in this course, we've done some of the work involved with implementing `CRUD`. 
+
+The actions Create, Read, Update, and Delete correspond directly with the HTTP verbs `POST`, `GET`, `PUT`, and `DELETE`.
+
+-
+
+| HTTP Method | CRUD   | Explanation                                                                                                                        |
+|:------------|:-------|:-----------------------------------------------------------------------------------------------------------------------------------|
+| `POST`      | Create | Most often utilized to _create_ new resources. Upon success, returns a `201` status code.                                          |
+| `GET`       | Read   | Used to _read_ a representation of a resource. Upon success, returns data in the form of `XML` or `JSON` with a `200` status code. |
+
+-
+
+| HTTP Method | CRUD   | Explanation                                                                                                                        |
+|:------------|:-------|:-----------------------------------------------------------------------------------------------------------------------------------|
+| `PUT`       | Update | Most often used to _update_ data on a server. Upon success, usually returns a `200` or `204`.                                      |
+| `DELETE`    | Delete | Used to _delete_ a resources. Upon success, usually returns a `200` status code.                                   
+|
+
+-
+
+In this course, we most likely will not use anything other than the **GET** verb mainly because on frontend systems, for security reasons, we want to discourage the ability to add or remove items.
+
+-
+### Understanding `CRUD` Through Public APIs
+Now that we have an understanding of what `CRUD` is and how it's implemented by means of HTTP methods, let's spend the next few minutes researching one or more of the following APIs to find examples of how to create, read, update or delete.
+
+In the examples you find, exactly what is being created, read, updated or deleted? For example, for the Twitter API, what HTTP method on what endpoint must we hit in order to create a post in a feed, *i.e.* tweet?
+
+- Twitter: [https://dev.twitter.com/rest/public](https://dev.twitter.com/rest/public)
+- Instagram: [https://www.instagram.com/developer/endpoints/](https://www.instagram.com/developer/endpoints/)
+- YouTube: [https://developers.google.com/youtube/v3/docs/](https://developers.google.com/youtube/v3/docs/)
+- Flickr: [https://www.flickr.com/services/api/](https://www.flickr.com/services/api/)
+
+
+**Note:** Certain APIs may provide partial support for `CRUD` functionality. For example, they might allow you to archive items instead of allowing you to delete them.
+
+-
+
+### CRUD and Web APIs
+
+Bring it all together, a web API will often publish **POST**/**GET**/**PUT**/**DELETE** methods (and optionally, **PATCH**). 
+
+-
+
+These verbs pertain to **CRUD** actions which define how data persisted on a DB can/should be mutated.
+
+-
+
+The end result of these operations are usually HTTP responses that display data in JSON or XML format.
+
+-
+
+### AJAX
+
+**AJAX**, or **A**synchronous **J**avascript **a**nd **X**ML, is a protocol defined by web browsers that let us **invoke** web API calls via javascript **without** reloading the page.
+
+-
+
+**AJAX** works through the **XMLHttpRequest**  API provided by browsers that allow us to open network connections for making web API calls and providing callbacks for listening to the response and incorporating it back to our UI code.
+
+-
+
+**NOTE**: AJAX calls are always asynchronous, meaning we **always** rely on callbacks to process data returned.
+
+-
+
+### Concurrency
+
+It is worth pointing out that if we make **TWO** API calls simultaneously, we are not guaranteed that the first call will finish before the second! For instance:
+
+```js
+concurrentCall1(data => {
+	console.log('1 is done!')
+});
+concurrentCall1(data => {
+	console.log('2 is done!')
+});
+// which happens first? is it deterministic tho?
+```
+
+	**QUESTION**: how could we ensure `concurrentCall1` would occur *before* `concurrentCall2`?
+
+---
+
+## Exercise 1
+
+![woohoo](https://media3.giphy.com/media/31lPv5L3aIvTi/giphy.gif)
+
+**Part 2**
+
+👇👇👇
+
+-
+
+### Giphy Search Engine
+
+Here are the main features we would like to accomplish in our UI.
+
+👇
+
+-
+
+### Second Pass
+
+* Read and grok **[Giphy API](https://developers.giphy.com/docs/)** docs
+* Pull in a sample API response and use that to mock a single result set in browser
+* IE: regardless of what user types in, always display results for a certain query (ie: pandas, let's say) to the browser window (with the images rendering)
+
+-
+
+### Third Pass
+
+* Figure out how to make API calls in javascript
+* Make an appropriate API call to giphy search API to display real results to browser
+
+
+---
+
+## Exercise 2
+
+👇👇👇
+
+-
+### Gif Weather App
 
 You can start with this HTML **[boilerplate](https://github.com/FEWDMaterials/boilerplate-plain)**
 
@@ -276,17 +242,5 @@ You can start with this HTML **[boilerplate](https://github.com/FEWDMaterials/bo
 * Use **[GiphyAPI](https://developers.giphy.com/)** to then query for a gif that describes current weather condition returned from OpenWeatherMap.
 * Once both data points have been resolved, display gif and weather conditions on screen for user
 
----
 
-## [myJSON API](http://myjson.com/api)
-
-Using the **myJSON** API, implement persistence for the **[ShoppingUI](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_12/class_notes/shoppingListUI)**.
-
----
-
-## Homework
-
-**DUE:** Weds Feb 14th.
-
-Begin work on your final projects!
 
