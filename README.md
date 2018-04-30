@@ -51,11 +51,12 @@ I have preserved a "snapshot" of prior course iterations as a branch of this rep
 
 ### [Lecture 14: jQuery Plugins / Dynamic Apps](Lecture_14) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=14) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_14/class_notes)
 
+### [Lecture 15: Dynamic Apps / Asynchronous JavaScript](Lecture_15) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=15) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_15/class_notes)
+
+### [Lecture 16: Introduction to Promises](Lecture_16) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=16) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_16/class_notes)
+
+
 ✅✅✅✅
-
-### [Lecture 15: APIs 2.0](Lecture_15) | [Slides](https://mottaquikarim.github.io/rehearsal/public/stage.html?source=qgdsd#/) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_15/class_notes)
-
-### [Lecture 16: AsyncJS](Lecture_16) | [Slides](https://mottaquikarim.github.io/rehearsal/public/stage.html?source=qend5#/) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_16/class_notes)
 
 ### [Lecture 17: CRUD](Lecture_17) | [Slides](https://mottaquikarim.github.io/rehearsal/public/stage.html?source=1bn8a3#/) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_17/class_notes)
 
