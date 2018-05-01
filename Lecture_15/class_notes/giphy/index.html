@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0;'>
+    <title>API(s)</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel='stylesheet' href='styles/main.css'>
+</head>
+<body>
+
+	<!-- As a heading -->
+	<nav class="navbar navbar-dark bg-primary">
+	  <span class="navbar-brand mb-0 h1">GIPHY API</span>
+	</nav>
+
+	<form class="container">
+	  <br>
+	  <div class="form-group">
+	    <label for="search-query-input">Search Query</label>
+	    <input type="text" class="form-control js-search-query" id="search-query-input" aria-describedby="emailHelp" placeholder="Enter search query...">
+	    <small class="form-text text-muted">We will query the GIPHY API to retrieve and renders results</small>
+	  </div>
+	  <button type="submit" class="btn btn-primary js-submit">Submit</button>
+	</form>
+
+	<div class="container">
+		<nav aria-label="Page navigation example">
+		  <ul class="pagination js-page">
+		  </ul>
+		</nav>
+		<div class="row js-content">
+
+		</div>
+	</div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='javascript/main.js'></script>
+</body>
+</html>
