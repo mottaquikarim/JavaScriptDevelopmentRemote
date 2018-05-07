@@ -1,5 +1,5 @@
 ### Lecture 17
-#  CRUD
+# Promises cont'd
 ### Taq Karim
 
 *Senior Software Engineer*, ** [Intersection](https://www.intersection.com/)**
@@ -8,19 +8,232 @@
 
 ## Objectives
 
-* Understand CRUD principles
+* Practice w/promises
+* Shopping List w/Promises
+
 ---
 
 
 ## Agenda
 
-1. Definition of CRUD
-2. Writing our ShoppingList with CRUD principles
-3. Refactoring ShoppingList to use Airtable
+* Creating Promises
+* Practice
+* Using Promises
+* Practice
+* Shopping List
+
+---
+## Creating Promises
+
+-
+
+Let's begin by remembering how to create a promise.
+
+```js
+const p = new Promise((resolve, reject) => {
+	resolve(5);
+});
+```
+
+Here, **`p`** is a **promise object**. 
+
+-
+
+Because we **`resolve`**d  **`p`** to **5**, we can expect the following:
+
+```js
+p.then((data) => {
+	console.log(data); // we expect to see 5 here
+});
+```
+
+-
+
+Moreover, let us now consider the following:
+
+```js
+const p = new Promise((resolve, reject) => {
+	reject(5);
+});
+```
+
+Notice that here, we are **`reject`**-ing **5**.
+
+-
+
+Therefore, we can expect:
+
+```js
+p.catch((err) => {
+  // now we get 5, but in the __catch__ 
+	// property of promise object p
+	console.log(err);
+});
+```
+
+-
+
+Promises can be **resolved** or **rejected**. This is especially useful for AJAX requests when there is a real possibility that the operation may time out or be canceled for one reason or another (for example, lack of authentication and/or expired API key).
+
+-
+
+Here's an example demonstrating how to create a promise capable of resolving / rejecting itself
+
+```js
+const p = new Promise((resolve, reject) => {
+	if (Math.random() < 0.5) { resolve(5); }
+	else { reject(5); }
+});
+
+p.then(d => console.log('resolved!'))
+ .catch(err => console.log('rejected!'))
+```
+
+-
+
+However, creating a promise outright (as in, storing into a variable), is not very useful. To make promise based actions more reusable, let's wrap into a function.
+
+```js
+const get5AsPromise = () => {
+	return new Promise((resolve, reject) => {
+		if (Math.random() < 0.5) { resolve(5); }
+		else { reject(5); }
+	});
+}
+```
+
+-
+
+Crucially, notice that:
+
+```js
+const p = get5AsPromise();
+p.then(d => console.log('resolved!'))
+ .catch(err => console.log('rejected!'))
+```
+^^^ ... which looks exactly the same as what we had done before, except that the promise implementation is now wrapped into a function 
 
 ---
 
-## CRUD
+## Practice
+
+**[Promises PSET](http://samantha.fewd.us/#fork/mottaquikarim/JSR-PSET_Creating_Promises)**
+
+(To test the XHR problem, use the **Giphy** random api endpoint:
+
+**https://api.giphy.com/v1/gifs/random**)
+
+---
+
+## Using Promises
+
+Let's talk through some usecases with chainable **then** and **catch** method invocations
+
+
+👇👇👇
+
+-
+
+```
+const rollDie = () => new Promise((resolve, reject) => {
+	setTimeout(() => {
+		const n = Math.floor(Math.random()*10)+1;
+		if (n > 6) {
+			reject('Greater than 6')
+		}
+		else resolve(n)
+	}, 500);
+});
+
+rollDie()
+	.then(dieRoll => console.log(dieRoll))
+	.catch(e => console.log(e))
+```
+
+In this example, we try to roll an unfair die and if our roll is greater than expected we **catch** the error and log it, else we display the die value
+
+-
+
+Multiple, separate promises
+
+* What if we wanted to roll **three** die and then based on the result evaluate them...?
+
+👇👇👇
+
+-
+
+Let's define the die roll a bit more simply...
+```
+const rollDie = () => new Promise((resolve, reject) => {
+	const timeout = Math.floor(Math.random()*1000)
+	setTimeout(() => resolve(Math.floor(Math.random()*10)+1), timeout);
+});
+```
+👇👇👇
+
+-
+
+Then, let's implement the rolls themselves
+
+```
+const r1 = rollDie();
+const r2 = rollDie();
+const r3 = rollDie();
+
+Promise.all([r1, r2, r3]).then((values) => {
+	console.log(values); // expect: [1,2,3]
+})
+```
+Much simpler!
+
+-
+
+Now suppose we wanted to **ensure** roll1 happened **before** roll2, etc
+
+```
+const r1 = rollDie();
+const r2 = r1.then(() => rollDie());
+const r3 = r2.then(() => rollDie());
+
+Promise.all([r1, r2, r3]).then((values) => {
+	console.log(values); // expect: [1,2,3]
+})
+```
+This will ensure r1 happens **first**, **then** r2, **then** r3. We can still collect all the output using **Promise.all**.
+
+
+---
+
+## Exercise 1
+
+(Giphy weather app...but with promises!)
+👇
+
+-
+### Gif Weather App
+
+You can start with this HTML **[boilerplate](https://github.com/FEWDMaterials/boilerplate-plain)**
+
+👇👇👇
+
+-
+
+**Requirements**
+
+* Use **[OpenWeatherMap](https://openweathermap.org/api)** API to query current weather conditions for your city / locality
+* Use **[GiphyAPI](https://developers.giphy.com/)** to then query for a gif that describes current weather condition returned from OpenWeatherMap.
+* Once both data points have been resolved, display gif and weather conditions on screen for user
+* **MUST USE PROMISES** to handle all asynchronous aspects of this build
+
+---
+
+## Exercise 2
+
+👇👇👇
+
+-
+
+### REMINDER: CRUD
 
 **C**reate, **R**ead, **U**pdate, **D**elete
 
@@ -28,49 +241,7 @@
 
 -
 
-In general, there are four standard actions that we can perform on a set of data: 
-* Create, 
-* Read, 
-* Update, and 
-* Delete 
-
-or `CRUD` for short. 
-
-👇👇👇
-
--
-
-The term `CRUD` is standard when referring to functions we can perform on some stored data, typically stored in a database.
-
-👇👇👇
-
--
-
-We can also perform `CRUD` actions when interacting with an API. For example, with Instagram's API, a user is allowed to:
-
-👇👇👇
-
--
-
-* **Create** new data on Instagram's server by uploading a post with a picture with a caption
-* **Read** data from Instagram's server by fetching posts
-* **Update** data in Instagram's server by editing a caption
-* **Delete** data from Instagram's server by removing a post
-
--
-
-Typically, to implement `CRUD`, we run our application on a server, and use it to interact with a database.  However, any type of stateful app that implements functions for creating, reading, updating, and deleting data from an array or object technically counts as CRUD.
-
--
-
-Today, we will explore CRUD first by refactoring our **`ShoppingList`** with CRUD. Find the requirements below:
-
-
-
----
-
-
-## ShoppingList Refactor
+### ShoppingList Refactor
 
 Let's refactor our shopping list to implement CRUD.
 
@@ -157,7 +328,13 @@ ShoppingList.remove = (id) => {
 
 ---
 
-## ShoppingList w/Airtable
+## Exercise 3
+
+👇👇👇
+
+-
+
+### ShoppingList w/Airtable
 
 **[Airtable](https://airtable.com/)** is a simple spreadsheet as a service application.
 (Create an account on Airtable now).
@@ -243,11 +420,3 @@ In particular, all our functions should return promises.
 
 Next lecture, we will move our app into a serverside script and discover that, with very little additional work, we can create our own API to handle these operations.
 
-
----
-
-## Homework
-
-**DUE:** Weds Feb 14th.
-
-Begin work on your final projects!
