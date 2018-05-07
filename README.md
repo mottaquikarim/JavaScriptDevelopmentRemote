@@ -55,10 +55,10 @@ I have preserved a "snapshot" of prior course iterations as a branch of this rep
 
 ### [Lecture 16: Introduction to Promises](Lecture_16) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=16) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_16/class_notes)
 
+### [Lecture 17: Promises Cont'd](Lecture_17) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=17) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_17/class_notes)
+
 
 ✅✅✅✅
-
-### [Lecture 17: CRUD](Lecture_17) | [Slides](https://mottaquikarim.github.io/rehearsal/public/stage.html?source=1bn8a3#/) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_17/class_notes)
 
 ### [Lecture 18: Life After the Browser](Lecture_18) | [Slides](https://mottaquikarim.github.io/rehearsal/public/stage.html?source=8hpul#/) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_18/class_notes)
 
