@@ -1,5 +1,5 @@
 ### Lecture 18
-#  Life after the Browser
+# Promises, APIs, and UIs
 ### Taq Karim
 
 *Senior Software Engineer*, ** [Intersection](https://www.intersection.com/)**
@@ -8,35 +8,71 @@
 
 ## Objectives
 
-* Understand how to run javsacript outside of the browser context
+* Complete the ShoppingList implementation using promises
+* Explore Webtask
+
 ---
 
 
 ## Agenda
 
-1. Move our CRUD app into the serverside
-2. Building a simple chatbot with Twilio
-3. Writing scripts with NodeJS
+* Completing ShoppingList factory
+* Building UI around ShoppingList factory
+* Proxying with Webtask
+
+---
+## Complete ShoppingList Factory
+
+**[Code](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_17/class_notes/shoppinglist)**
+
+Let's complete this implementation as a class with a few additional requirements...
+
+-
+
+### Requirements
+
+* Support: **in-memory** storage, **localstorage**, and **airtable** storage
+* Regardless of storage config, API should be the same and ShoppingList should use a constant set of functions for CRUD
+* Developer is able to pass along a config object with settings as needed
+
 
 ---
 
-## Serverside JS
+## Building UI around ShoppingList Factory
 
-**C**reate, **R**ead, **U**pdate, **D**elete
+Now, let's create a simple UI around the ShoppingList Factory
+
+-
+
+Initially, we just want to:
+
+* Have input fields for item and price
+* Adding "new" item updates storage and **then** updates UI
+* Price is updated on the fly as user interacts with list
+
+-
+
+V2 (optional)
+
+* Let's have support for **two** shopping list UIs side by side
+* When either one is updated, we should reflect a message on bottom which states how much cheaper one list is vs the other
+* Developer has ability to have say left side use in-memory storage and right side use airtable storage, etc
+
+
+---
+
+## Proxying with Webtask
+
+Let's move our ShoppingList over to a serverside script.
 
 👇👇👇
 
 -
 
-Remember our CRUD** [ShoppingList app](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_17/class_notes/crud)**? 
+### Advantages
 
-👇👇👇
-
--
-
-Let's leverage the apparent advantage of writing our code in **state** vs **render** specific UI code.
-
-👇👇👇
+* API key and other sensitive information is concealed from client
+* We can circumvent any CORs issues as they come up
 
 -
 
@@ -52,17 +88,10 @@ Create a new Webtask script with a **basic** template.
 
 -
 
-Before doing anything with the code, explore the UI. Can you guess what the `context` variable represents? How do you "call" serverside code...? What are the inputs? The outputs? How is it different from the browser?
+Before doing anything with the code, explore the UI. Can you guess what the `context` variable represents? How do you "call" serverside code...? What are the inputs? The outputs? How is it different from the browser? How can you explore this?
 
--
-
-Copy the **[highlighted code here](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/blob/master/Lecture_17/class_notes/crud/javascript/shoppinglist.js#L1,L91)** and paste into Webtask (above the **module.exports** function)
 
 👇👇👇
-
--
-
-Invoke a **`ShoppingList.create`** within the **module.exports** call. What does it do? 
 
 -
 
@@ -88,9 +117,8 @@ module.exports = Webtask.fromExpress(app);
 
 ```
 
--
-
 What does the code above do? How can you "test" this code? 
+
 
 -
 
@@ -99,10 +127,23 @@ What does the code above do? How can you "test" this code?
 
 ---
 
+## Exercise 2
 
-## Twilio Chatbot
+👇👇👇
 
-Let's create a simple Texting Chat bot with JS and Webtask
+-
+
+### REMINDER: CRUD
+
+**C**reate, **R**ead, **U**pdate, **D**elete
+
+👇👇👇
+
+-
+
+### ShoppingList Refactor
+
+Let's refactor our shopping list to implement CRUD.
 
 👇👇👇
 
@@ -110,85 +151,172 @@ Let's create a simple Texting Chat bot with JS and Webtask
 
 ###  Requirements
 
-Our bot will be super simple; it should:
+Implement the following functions:
 
-1. Process a text message sent with webtask (we call this a **webhook**)
-2. Reply back such that the initial text message sender gets a response.
+* **`ShoppingList.create`**
+* **`ShoppingList.list`**
+* **`ShoppingList.listOne`**
+* **`ShoppingList.update`**
+* **`ShoppingList.remove`**
 
-👇👇👇
-
--
-
-### Twilio
-
-**[Twilio](https://www.twilio.com/)** is a software service that allows developers to purchase phone numbers for programmatic use.
+More info on each method below
 
 👇👇👇
 
 -
 
-Sign up for a free **[Twilio](https://www.twilio.com/)** account. Do not pay for a phone number, your first one should be free.
-
-We will use **[this](https://www.twilio.com/docs/quickstart/node/programmable-sms#sign-up-for-twilio-and-get-a-twilio-phone-number)** tutorial to set up our twilio chat bot.
-
--
-
-### Scheduler
-
-Using Webtask's scheduler UI, we can also have our script send us texts on a regular basis. (Great for doing lookups for train times/traffic conditions, etc for your morning/evening commutes).
-
----
-
-## NodeJS Scripting
-
-We can also write simple scripts that run on our machine
-
-👇👇👇
-
--
-
-### NannyScript
-
-Let's write a simple script that will yell at us if we open our terminal after 9PM.
-
--
-
-We can start with **[this](https://developer.atlassian.com/blog/2015/11/scripting-with-node/)**
-tutorial which shows us how to install a nodejs script that can be run from terminal.
-
-👇👇👇
-
--
-
-Then, let's create a **`~/.bashrc`** file and run our node script in it. The **`~/.bashrc`** script will run every time we open terminal.
-
-👇👇👇
-
--
-
-### JS file copy
-
-We can also write our own version of the **copy** command we always use on computers.
-
--
-
-Take a look at **[fs.readFile](https://nodejs.org/api/fs.html#fs_fs_readfile_path_options_callback)** and **[fs.writeFile](https://nodejs.org/api/fs.html#fs_fs_writefile_file_data_options_callback)**.
-
-Are promises necessary to achieve this copy effect?
-
--
-
-The **[Commander](https://github.com/tj/commander.js)** NPM module makes it very easy to pull in arguments from the command line, like so:
+### `ShoppingList.create`
 
 ```js
-$ copyfile-js source.txt destination.txt
+ShoppingList.create = (item, price) => {
+	const id = /* unique id corresponding to record */
+	/* this id must be stored / associated with */
+	/* the record being added */
+	/* ... */
+	return id;
+}
 ```
 
+-
+
+### `ShoppingList.list`
+
+```js
+ShoppingList.list = () => {
+	/* return array of all records */
+	/* each item in array must be object that */
+	/* contains the ID of the record that was created */
+	/* ShoppingList.create */
+	return []; 
+}
+```
+
+-
+
+### `ShoppingList.listOne`
+
+```js
+ShoppingList.listOne = (id) => {
+	/* query records, find by id and return that record */
+	return {};
+}
+```
+
+-
+
+### `ShoppingList.update`
+
+```js
+ShoppingList.update = (id, data) => {
+	/* data should be an object */
+	/* that includes EITHER item or price or both */
+	/* id cannot be changed */
+	return true; // or false if id not found
+}
+```
+
+-
+
+### `ShoppingList.remove`
+
+```js
+ShoppingList.remove = (id) => {
+	/* remove entire record from store */
+	return true; // or false if id not found
+}
+```
 
 ---
 
-## Homework
+## Exercise 3
 
-**DUE:** Weds Feb 14th.
+👇👇👇
 
-Begin work on your final projects!
+-
+
+### ShoppingList w/Airtable
+
+**[Airtable](https://airtable.com/)** is a simple spreadsheet as a service application.
+(Create an account on Airtable now).
+
+👇👇👇
+
+-
+
+We can create spreadsheets in Airtable and then use their API to programmatically add or remove data from that sheet.
+
+👇👇👇
+
+-
+
+This essentially gives us a database, but it is much more beginner friendly and easier to set up - making it an ideal choice for our initial foray into persistent, CRUD based apps
+
+👇👇👇
+
+-
+
+### Copy [Base](https://airtable.com/shr34mfhrGxf1Cp63/tblgcLwxNfHOxXhz2/viwLSG3uEwUIjlZXJ).
+
+Essentially a **base** is Airtable's terminology for a spreadsheet. I've created a sample one we can use for our CRUD app.
+
+Assuming you have an account with Airtable already, copy the base.
+
+-
+
+### API Docs
+
+Once the base is open in your account, click on the top right **?** icon and click **API Documentation**.
+
+-
+
+### API Calls
+
+The Airtable API is insanely non-restrictive. 
+
+**DO NOT DEPLOY ANY OF THE FOLLOWING IMPLEMENTATIONS**.
+
+👇👇👇
+
+-
+
+**Gut check**: can we retrieve our data?
+
+Following the **node** tab instructions, ensure that you can make a call out to Airtable API and receive data.
+
+You may need to check the **show api key** box on the top right for this.
+
+👇👇👇
+
+-
+
+**Install Airtable client for browser**
+
+This is a **javascript** library written by airtable. We will prefer this lib because we can use the same functions on serverside as well.
+
+* **Go [here](https://github.com/Airtable/airtable.js)**.
+* Navigate to **build/** folder.
+* Download and save the **airtable_browser.js** file.
+
+-
+
+**Test the client to ensure it works**
+
+Click to the nearest **list records** entry (just scroll down, it will show up).
+
+Copy and paste the example code on the righthand side for the **node** tab and ensure that you are able to console.log your records in browser.
+
+-
+
+Having proved the **gut check**, we will now update our **`ShoppingList`** CRUD app to call out to this **Airtable** API for performing all operations.
+
+-
+
+
+**UPDATE** the **`ShoppingList`** CRUD app to rely on Airtable API to create, read, update, and delete data. Your functions themselves should not change, however the **implementations** (ie: their guts) **should** change drastically.
+
+In particular, all our functions should return promises. 
+
+-
+
+Next lecture, we will move our app into a serverside script and discover that, with very little additional work, we can create our own API to handle these operations.
+
