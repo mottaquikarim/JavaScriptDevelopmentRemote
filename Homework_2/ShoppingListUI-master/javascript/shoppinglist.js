@@ -8,15 +8,15 @@ $(document).ready(function () {
 		$('#addMe').val('');
 
 
-		$("#list-item").click(function(){
-			$(this).hide();
-			$(this).siblings("#edit").show().val($(this).text()).focus();
-		});
+		// $("#list-item").click(function(){
+		// 	$(this).hide();
+		// 	$(this).siblings("#edit").show().val($(this).text()).focus();
+		// });
 
-		$("#edit").focusout(function(){
-			$(this).hide();
-			$(this).siblings("#list-item").show().text($(this).val());
-		});
+		// $("#edit").focusout(function(){
+		// 	$(this).hide();
+		// 	$(this).siblings("#list-item").show().text($(this).val());
+		// });
 
 		function removeItem() {
   			$(this).parent().remove();
