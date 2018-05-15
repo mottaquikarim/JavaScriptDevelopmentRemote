@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!--
+      Note: this page is a great way to try React but it's not suitable for production.
+      It slowly compiles JSX with Babel in the browser and uses a large development build of React.
+
+      To set up a production-ready React build environment, follow these instructions:
+      * https://reactjs.org/docs/add-react-to-a-new-app.html
+      * https://reactjs.org/docs/add-react-to-an-existing-app.html
+
+      You can also use React without JSX, in which case you can remove Babel:
+      * https://reactjs.org/docs/react-without-jsx.html
+      * https://reactjs.org/docs/cdn-links.html
+    -->
+
+	<script src='javascript/airtable.js'></script>
+    <script src='javascript/main.js'></script>
+    <script type="text/babel">
+
+	const sl = getShoppingList();
+
+	const eggs = sl.create('eggs', 3.99);
+	const steak = sl.create('steak', 2.99);
+
+	Promise.all([eggs, steak])
+		// .then(promiseReturns => {
+		// 	console.log(promiseReturns);
+
+		// 	return sl.update(promiseReturns[1], {
+		// 		'price': 1.59,
+		// 		'tax': 0.0825,
+		// 	});
+		// })
+		// .then(isUpdateSuccess => {
+		// 	console.log(isUpdateSuccess)
+
+		// 	return sl.list()
+		// })
+		.then(list => {
+			return sl.list();
+		})
+		.then(list => {
+			console.log(list)
+			const element = (
+				<div>
+				  <h1>Shopping List!</h1>
+				  <ol>
+				  {list.data.map(list => {
+				  	return <li>{list.Item}, {list.Price}</li>
+				  })}
+				  </ol>
+				</div>
+			);
+
+			ReactDOM.render(element, document.getElementById('root'))
+		})
+		.catch(err => {
+			console.log('REASON: ', err)
+		});
+
+
+      // ReactDOM.render(
+      //   <h1>Hello, world!</h1>,
+      //   document.getElementById('root')
+      // );
+
+    </script>
+  </body>
+</html>
