@@ -61,9 +61,9 @@ I have preserved a "snapshot" of prior course iterations as a branch of this rep
 
 ### [Lecture 19:  Life beyond the browser](Lecture_19) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=19) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_19/class_notes)
 
-✅✅✅✅
+### [Lecture 20:  🙌 Fin  🙌 ](Lecture_20) | [Slides](https://mottaquikarim.github.io/JavaScriptDevelopmentRemote/stage/index.html?lecture=20)
 
-### [Lecture 20:  🙌 Fin  🙌 ](Lecture_20) | [Slides](https://mottaquikarim.github.io/rehearsal/public/stage.html?source=vw1x9#/) | [Notes](https://github.com/mottaquikarim/JavaScriptDevelopmentRemote/tree/master/Lecture_19/class_notes)
+✅✅✅✅
 
 ## HWK and Final Project Info
 
