@@ -94,13 +94,6 @@
 ... but ya did it anyways! Bravo.
 
 ---
-## End of Course Survey
-
-Should be in email, please fill out! 
-
-(10 mins)
-
----
 ## Presentations
 
 👇👇👇
@@ -119,14 +112,23 @@ As you present, answer the following:
 
 ### Presentations
 
+* **[Adam Rosson](https://adamrosson.github.io/chowsen-one/)**
 * **[Mihai Slujitoru](https://mihaislujitoru.github.io/Search-for-Movies/)**
 * **[Hari Subhash](https://rgi-tool.herokuapp.com/)**
 * **[Matt Nonnamaker](https://mnonnama.github.io/JSRFinalNonnamaker/)**
-* **[Adam Rosson](https://adamrosson.github.io/chowsen-one/)**
 * **[Nazario A]( Ayala	http://roomfinder.dev.niztech.com)**
 * **[Tim Hankinson](https://hammerhankinson.github.io/band-template/)**
 * **[Shay Anderson](https://redleg222.github.io/BottledLightning/)**
+
+-
+
 * **[Ethan Heffler](https://github.com/EthanHeffler/eliminator)**
+* **[Adam Severance](https://aseverance91.github.io/finalProject-copy/)**
+* **[Clay Willett](https://github.com/clawille/JavaScriptDevelopmentRemote/tree/master/Homework_3)**
+* **[Vadim Flaks](https://github.com/MVanderer/JS-Intro-final-project)**
+* **[Niklas Dahlqvist](http://demo.niklasdahlqvist.com/ga-project/)**
+* **[Andrew Kimmel](https://adkimmel.github.io/JSR-Final-Project/)**
+* **[Hector Correa](https://github.com/correah2009/location)**
 
 ---
 
